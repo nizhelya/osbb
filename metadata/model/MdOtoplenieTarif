@@ -1,0 +1,85 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MdOtoplenieTarif"
+    },
+    "name": "MdEnergyTarif1",
+    "designerId": "774cb0f0-3484-4337-827c-5d26760fa6c5",
+    "cn": [
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "usluga"
+            },
+            "name": "MyString221",
+            "designerId": "68cd03a9-2c1a-498f-a523-6c6f1fe2182c"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tarif"
+            },
+            "name": "MyString222",
+            "designerId": "55de7bd0-6742-4740-b225-591f46d2d984"
+        },
+        {
+            "type": "Ext.data.proxy.Memory",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "data": [
+                    "[",
+                    "{",
+                    "\"usluga\": \"Отопление за 1Гкал\",",
+                    "\"tarif\": \"gkal\"",
+                    "},",
+                    "{",
+                    "\"usluga\": \"Отопление за 1м2\",",
+                    "\"tarif\": \"otoplenie\"",
+                    "},",
+                    "{",
+                    "\"usluga\": \"Кол-во Гкал по домовому тепл-у\",",
+                    "\"tarif\": \"gkal_nach\"",
+                    "},",
+                    "{",
+                    "\"usluga\": \"Лимит Гкал на 1 м2\",",
+                    "\"tarif\": \"gkm2_lg\"",
+                    "},",
+                    "{",
+                    "usluga: 'тариф ПТН',",
+                    "tarif: 'ptn'",
+                    "},",
+                    "{",
+                    "usluga: 'Гкал/час на м2',",
+                    "tarif: 'gkal_hour'",
+                    "},",
+                    "{",
+                    "usluga: 'ПТН 1м2 по льготе',",
+                    "tarif: 'ptn_m2_lg'",
+                    "}",
+                    "]"
+                ]
+            },
+            "name": "MyMemoryProxy",
+            "designerId": "69b5b361-3a8f-4b41-91bc-c1e79fd0cfc0"
+        }
+    ]
+}

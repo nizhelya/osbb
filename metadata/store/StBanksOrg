@@ -1,0 +1,111 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": null,
+        "autoSync": null,
+        "designer|userAlias": "stBanksOrg",
+        "designer|userClassName": "StBanksOrg",
+        "model": "MdBanks",
+        "storeId": "stBanksOrg"
+    },
+    "name": "StBanks1",
+    "designerId": "89a29f95-3cc4-4903-aef1-64c5e7e9a6a8",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{",
+                    "    create: 'QuerySprav.createRecord',",
+                    "    read: 'QuerySprav.getResults',",
+                    "    update: 'QuerySprav.updateRecords',",
+                    "    destroy: 'QuerySprav.destroyRecord'",
+                    "}"
+                ],
+                "directFn": null,
+                "extraParams": [
+                    " {'what':'getBankOrg'}"
+                ]
+            },
+            "name": "MyDirectProxy82",
+            "designerId": "8c23d387-0ac8-416f-a3d9-dcce723e97af",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader84",
+                    "designerId": "77ae459d-0593-4fd6-b01e-e7a05a69894f"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "nameProperty": "login, password",
+                        "writeAllFields": true
+                    },
+                    "name": "MyJsonWriter4",
+                    "designerId": "09bbd841-6a75-494e-9efe-eb106dddef14"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onDirectstoreUpdate",
+                "implHandler": [
+                    "              record.data.what = \"getBankOrg\";",
+                    ""
+                ],
+                "name": "update",
+                "scope": "me"
+            },
+            "name": "onDirectstoreUpdate",
+            "designerId": "3883dcb4-3b33-40a2-ac19-28dee465a791"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onDirectstoreRemove",
+                "implHandler": [
+                    "              records[0].data.what = \"getBankOrg\";",
+                    ""
+                ],
+                "name": "remove",
+                "scope": "me"
+            },
+            "name": "onDirectstoreRemove",
+            "designerId": "4cbd2467-aab7-483b-a085-aa1ab06c0ace"
+        }
+    ]
+}

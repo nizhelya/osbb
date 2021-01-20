@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "tabrfond",
+        "designer|userClassName": "sprav.TabRfondViewController"
+    },
+    "name": "sprav.TabVaxtaViewController1",
+    "designerId": "a3b3fda9-afb7-4dec-9c89-b395492c3237"
+}

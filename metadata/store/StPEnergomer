@@ -1,0 +1,71 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "StPEnergomer",
+        "model": "MdPriborUcheta",
+        "remoteFilter": null,
+        "remoteSort": null,
+        "storeId": "StPEnergomer"
+    },
+    "name": "StWater1",
+    "designerId": "f5df8956-ea5e-43b9-acbb-ad9052f4c08e",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "QueryEnergomer.getResults"
+            },
+            "name": "MyDirectProxy7",
+            "designerId": "339b94e4-41e4-4b53-b113-e54610bb61b0",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader7",
+                    "designerId": "49bd7285-e1f0-43a6-a59a-2e87b9f9e7e0"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onDirectstorePrefetch",
+                "implHandler": [
+                    "",
+                    "var address_id = store.getAt(0).get('address_id');",
+                    "//console.log(address_id);",
+                    "store.getProxy().extraParams = {",
+                    "    what: \"AllPokVodomera\",",
+                    "    what_id: address_id",
+                    "};"
+                ],
+                "name": "prefetch",
+                "scope": "me"
+            },
+            "name": "onDirectstorePrefetch",
+            "designerId": "e7cb2d9d-fc31-41d1-aef9-a7181c34a7cb"
+        }
+    ]
+}

@@ -1,0 +1,59 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "data": [
+            "[",
+            "{",
+            "\"abbr\": \"ул\"",
+            "},",
+            "{",
+            "\"abbr\": \"пл\"",
+            "},",
+            "{",
+            "\"abbr\": \"пр\"",
+            "},",
+            "{",
+            "\"abbr\": \"шос\"",
+            "},",
+            "{",
+            "\"abbr\": \"пер\"",
+            "}",
+            "]"
+        ],
+        "designer|userAlias": "stAbbr",
+        "designer|userClassName": "StAbbr",
+        "storeId": "stAbbr"
+    },
+    "designerId": "3e369cf5-a4c8-4671-83f5-86a6340abb02",
+    "cn": [
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "abbr"
+            },
+            "name": "MyString215",
+            "designerId": "64f6808e-01f7-42fe-ae4e-bd7a701391c9"
+        },
+        {
+            "type": "Ext.data.proxy.Memory",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyMemoryProxy",
+            "designerId": "806e3452-1330-48f4-93d7-1c10b8cb4660"
+        }
+    ]
+}

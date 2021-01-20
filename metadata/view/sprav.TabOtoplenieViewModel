@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "tabotoplenie",
+        "designer|userClassName": "sprav.TabOtoplenieViewModel"
+    },
+    "name": "sprav.TabEnergyViewModel1",
+    "designerId": "8cdce594-729a-4cd6-a4f9-8af3acff3dcd"
+}

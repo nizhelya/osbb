@@ -1,0 +1,47 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "stWaterHouse",
+        "designer|userClassName": "StWaterHouse",
+        "groupDir": null,
+        "groupField": null,
+        "model": "MdWaterHouse",
+        "storeId": "stWaterHouse"
+    },
+    "designerId": "7d3ebad0-fa71-4891-ab5f-ee6c26f0875c",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "QueryVodomer.getResults"
+            },
+            "name": "MyDirectProxy55",
+            "designerId": "c8a240a0-50b2-4bc9-ae77-107e21aebcb3",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader57",
+                    "designerId": "cc336241-74dc-459c-a655-e3d3d4f9b63e"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "stOrgWater",
+        "designer|userClassName": "StOrgWater",
+        "model": "MdPriborUcheta",
+        "remoteFilter": null,
+        "remoteSort": null,
+        "storeId": "stOrgWater"
+    },
+    "designerId": "f2964fbd-96e1-4492-9062-b68a2e507ea0",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "QueryVodomer.getResults"
+            },
+            "name": "MyDirectProxy26",
+            "designerId": "b4b945fe-5058-44f6-9861-f2f8f7eecfdb",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader26",
+                    "designerId": "2c04cc6e-b088-4464-b7c0-a69d4eca9bc7"
+                }
+            ]
+        }
+    ]
+}

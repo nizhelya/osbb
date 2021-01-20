@@ -1,0 +1,48 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "stMop",
+        "designer|userClassName": "StMop",
+        "model": "MdPriborUcheta",
+        "storeId": "StMop"
+    },
+    "designerId": "54cdeeda-59b2-4c99-9321-a674ca3a71db",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "QueryTeplomer.getResults",
+                "extraParams": [
+                    "{what:'MopByDteplomer'}"
+                ]
+            },
+            "name": "MyDirectProxy33",
+            "designerId": "ae0df5cf-d2fa-45b5-8175-163de2509c9c",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader33",
+                    "designerId": "86077d3c-3ecb-4ecd-a5bf-fcf8b389f231"
+                }
+            ]
+        }
+    ]
+}

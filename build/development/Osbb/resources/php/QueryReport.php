@@ -1,0 +1,362 @@
+<?php
+include_once './yis_config.php';
+
+class QueryReport
+{
+
+	private $_db;
+	protected $login;
+	protected $password;
+	protected $result;
+	protected $res_callback;
+	protected $sql;	
+	protected $sql_callback;
+	protected $row;	
+	protected $id;
+	protected $what;
+	protected $nomer;
+	protected $type_id;
+	protected $pokaz;
+	protected $pred;
+	protected $tek;
+	protected $kub;
+	protected $base = BASE;
+	protected $data=NULL;
+	protected $res=array();	
+	public	  $results=array();
+	
+	/*public function connect($this->login,$this->password)
+	{
+		//                 'hostname', 'username' ,'password', 'database'
+		$_db = new mysqli('localhost', 'cthubq' ,'hfljyt;crbq', 'YISGRAND');
+		
+		if ($_db->connect_error) {
+			die('Connection Error (' . $_db->connect_errno . ') ' . $_db->connect_error);
+		}
+		$_db->set_charset("utf8");
+    
+		return $_db;
+	}*/
+	
+	public function connect($login,$password)
+	{
+		//                 'hostname', 'username' ,'password', 'database'
+		$_db = new mysqli('localhost', $login ,$password, 'YISGRAND');
+		if ($_db->connect_error) {
+			return false;
+		} else {		
+		$_db->set_charset("utf8");    
+		return $_db;
+		}
+	}
+
+
+	    public function getResults(stdClass $params)
+	{
+
+		if(isset($params->login) && ($params->login)) {
+		  $this->login= addslashes($params->login);
+		} else {
+		   $this->login= null;
+		}		
+		if(isset($params->password) && ($params->password)) {
+		  $this->password= $params->password;
+		} else {
+		   $this->password= null;
+		}
+
+		$_db = $this->connect($this->login,$this->password);
+	
+		if(isset($params->what) && ($params->what)) {
+		 $this->what = $params->what;
+		} else {
+		  $this->what = null;
+		}
+
+
+// num
+$this->cat_id=0;
+$this->raion_id=0;
+$this->address_id=0;
+$this->dog_id=0;
+$this->house_id=0;
+$this->org_id=0;
+$this->cat_yes=0;
+$this->raion_yes=0;
+$this->house_yes=0;
+$this->org_yes=0;
+//string
+$this->date_from='';
+$this->date_to='';
+$this->nr='';
+$this->ddata='';
+
+
+
+$array = (array) $params;
+foreach ( $array as $key => $value )  {
+   if(isset($value)) {  
+		  if (is_int($value)) { 
+					$this->$key= (int)$value;}
+			else if (is_float($value)) { 
+					$this->$key= $value;}
+			else if (is_array($value)) { 
+					$this->$key= (array)$value;}
+			else {
+					$this->$key =$_db->real_escape_string($value);
+			}
+  }
+}
+		$this->sql='';
+		$this->vod=implode(':',$this->vodomer);
+		//print($this->what);
+		switch ($this->what) {
+
+		
+			case "ItogBudjetPoGroup":			
+			      $this->sql='CALL '.$this->base.'.ItogBudjetPoGroup("'.$this->date_from.'","'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			 // print($this->sql);
+			break;
+			
+			case "ItogBudjetPoGroupRazv":			
+			      $this->sql='CALL '.$this->base.'.ItogBudjetPoGroupRazv("'.$this->date_from.'","'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			 // print($this->sql);
+			break;
+		
+			
+		case "NachislenoAllHouseVik":			
+			      $this->sql='CALL '.$this->base.'.NachislenoAllHouseVik("'.$this->house_id.'", "'.$this->date_from.'","'.$this->date_to.'",@head,@content,@foot,@success,@msg)';
+			//  print($this->sql);
+			break;
+		case "NachislenoAllHouseYtke":			
+			      $this->sql='CALL '.$this->base.'.NachislenoAllHouseYtke("'.$this->house_id.'", "'.$this->date_from.'","'.$this->date_to.'",@head,@content,@foot,@success,@msg)';
+			//  print($this->sql);
+			break;
+		case "NachislenoAllEnergy":			
+			      $this->sql='CALL '.$this->base.'.NachislenoAllEnergy("'.$this->date_from.'","'.$this->date_to.'",@head,@content,@foot,@success,@msg)';
+			//  print($this->sql);
+			break;			
+		case "KassaReestr":		
+			      $this->sql='CALL '.$this->base.'.KassaReestr('
+			      .'"'.$this->prixod_id.'", '
+			      .'"'.$this->date_from.'", '
+			      .'"'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			 // print($this->sql);
+			break;
+
+		
+		case "KassirReestrDay":		
+			      $this->sql='CALL '.$this->base.'.KassirReestrDay('
+			      .'"'.$this->prixod_id.'", '
+			      .'"'.$this->kassir.'", '
+			      .'"'.$this->date_from.'", '
+			      .'"'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			 // print($this->sql);
+			break;
+
+		
+		case "KassirReestr":		
+			      $this->sql='CALL '.$this->base.'.KassirReestr('
+			      .'"'.$this->prixod_id.'", '
+			      .'"'.$this->kassir.'", '
+			      .'"'.$this->date_from.'", '
+			      .'"'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			 // print($this->sql);
+			break;
+	case "NachislenoPodogrevAllYtke":		
+			      $this->sql='CALL '.$this->base.'.NachislenoPodogrevAllYtke('
+			      .'"'.$this->date_from.'", '
+			      .'"'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			 // print($this->sql);
+			break;
+			case "SvodOtNasel":		
+			      $this->sql='CALL '.$this->base.'.SvodOtNasel('
+			      .'"'.$this->date_from.'", '
+			      .'@content,@success,@msg)';
+			//  print($this->sql);
+			break;
+			case "NachislenoAllKv":		
+			      $this->sql='CALL '.$this->base.'.NachislenoAllKv('
+			      .'"'.$this->date_from.'", '
+			      .'"'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			 // print($this->sql);
+			break;
+			case "NachislenoAllVaxta":		
+			      $this->sql='CALL '.$this->base.'.NachislenoAllVaxta('
+			      .'"'.$this->date_from.'", '
+			      .'"'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			 // print($this->sql);
+			break;
+			case "NachislenoAllVik":		
+			      $this->sql='CALL '.$this->base.'.NachislenoAllVik('
+			      .'"'.$this->date_from.'", '
+			      .'"'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			 // print($this->sql);
+			break;
+			case "NachislenoAllTbo":		
+			      $this->sql='CALL '.$this->base.'.NachislenoAllTbo('
+			      .'"'.$this->date_from.'", '
+			      .'"'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			 // print($this->sql);
+			break;
+			
+			case "AppHistory":		
+			      $this->sql='CALL '.$this->base.'.AppHistory("'.$this->date_from.'","'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			break;
+			
+			case "LgotnikData":		
+			      $this->sql='CALL '.$this->base.'.LgotnikData("'.$this->date_from.'","'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			break;
+			case "ItogMonthYtke":		
+			      $this->sql='CALL '.$this->base.'.ItogMonthTeplo("'.$this->date_from.'","'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			break;
+			case "ItogMonth":		
+			      $this->sql='CALL '.$this->base.'.ItogMonth("'.$this->date_from.'","'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			      break;
+
+			case "ItogMonthVik":		
+			      $this->sql='CALL '.$this->base.'.ItogMonthVik("'.$this->date_from.'","'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			break;
+			case "ItogMonthKv":		
+			      $this->sql='CALL '.$this->base.'.ItogMonthKv("'.$this->date_from.'","'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			break;
+			case "ItogMonthVaxta":		
+			      $this->sql='CALL '.$this->base.'.ItogMonthVaxta("'.$this->date_from.'","'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			break;
+			case "ItogMonthTbo":		
+			      $this->sql='CALL '.$this->base.'.ItogMonthTbo("'.$this->date_from.'","'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			break;
+			case "ItogMonthEnergy":		
+			      $this->sql='CALL '.$this->base.'.ItogMonthEnergy("'.$this->date_from.'","'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			break;
+			case "controlLgot":
+			      $this->sql='CALL '.$this->base.'.controlLgot("'.$this->rbUsluga.'","'.$this->data.'", @head,@content,@foot,@success,@msg)';
+			break;
+			case "ControlTbo":		
+			      $this->sql='CALL '.$this->base.'.ControlTbo("'.$this->date_from.'","'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			break;
+			case "ControlVik":		
+			      $this->sql='CALL '.$this->base.'.ControlVik("'.$this->date_from.'","'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			break;
+			case "ControlVikOrg":		
+			      $this->sql='CALL '.$this->base.'.ControlVikOrg("'.$this->date_from.'","'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			break;
+			case "ControlKv":		
+			      $this->sql='CALL '.$this->base.'.ControlKvartplata("'.$this->date_from.'","'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			break;
+			case "ControlVaxta":		
+			      $this->sql='CALL '.$this->base.'.ControlVaxta("'.$this->date_from.'","'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			break;
+			case "ControlEnergy":		
+			      $this->sql='CALL '.$this->base.'.ControlEnergy("'.$this->date_from.'","'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			break;
+			case "ControlYtke":		
+			      $this->sql='CALL '.$this->base.'.ControlYtke("'.$this->date_from.'","'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			break;
+			case "reportLgotnik":		
+			      $this->sql='CALL '.$this->base.'.reportLgotnik("'.$this->date_from.'","'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			break;
+			case "reportLgotnikEnd":		
+			      $this->sql='CALL '.$this->base.'.reportLgotnikEnd("'.$this->date_from.'","'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			break;
+			
+			case "reportLgotnikLgota":		
+			      $this->sql='CALL '.$this->base.'.reportLgotnikLgota("'.$this->lgota_id.'", @head,@content,@foot,@success,@msg)';
+			break;
+			case "reportLgotnikIzm":		
+			      $this->sql='CALL '.$this->base.'.reportLgotnikIzm("'.$this->date_from.'","'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			break;
+			case "reportLgotnikGroup":		
+			      $this->sql='CALL '.$this->base.'.reportLgotnikGroup("'.$this->gr.'","'.$this->date_from.'","'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			break;
+			case "reportLgotnikHouse":		
+			      $this->sql='CALL '.$this->base.'.reportLgotnikHouse("'.$this->house_id.'", @head,@content,@foot,@success,@msg)';
+			break;
+			case "Dolgi":
+			$this->sql='CALL '.$this->base.'.DolgSumma("'.$this->house_id.'","'.$this->start.'","'.$this->finish.'","'.$this->date_from.'","'.$this->date_to.'",@head,@content,@foot,@success,@msg)';
+						//  print($this->sql);
+
+			break;
+			
+			case "CityVodomer":			
+					$this->sql='CALL '.$this->base.'.CityVodomer(@content,@success,@msg)';								
+				
+			break;
+			
+			case "Warning":			
+									$this->sql='CALL '.$this->base.'.DolgWarningSummaYtke('
+									.'"'.$this->house_id.'", '
+									.'"'.$this->start.'",'
+									.'"'.$this->date_from.'",'
+									.'"'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+						
+			break;
+
+			
+			
+		
+		
+
+			case "VikVodHouses":			
+			      $this->sql='CALL '.$this->base.'.VikVodHouses("'.$this->date_from.'","'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
+			//  print($this->sql);
+			break;
+			
+				
+			case "FlatRaspechatkaVik":			
+			      $this->sql='CALL '.$this->base.'.FlatRaspechatkaVik('.$this->address_id.',"'.$this->date_from.'","'.$this->date_to.'",@content,@success,@msg)';
+
+			break;
+						
+			case "FlatRaspechatkaYtke":			
+			      $this->sql='CALL '.$this->base.'.FlatRaspechatkaYtke('.$this->address_id.',"'.$this->date_from.'","'.$this->date_to.'",@content,@success,@msg)';
+
+			  //print($this->sql);
+			break;
+			case "FlatRaspechatkaKv":			
+			      $this->sql='CALL '.$this->base.'.FlatRaspechatkaKv('.$this->address_id.',"'.$this->date_from.'","'.$this->date_to.'",@content,@success,@msg)';
+
+			break;
+			case "FlatRaspechatkaTbo":
+			      $this->sql='CALL '.$this->base.'.FlatRaspechatkaTbo('.$this->address_id.',"'.$this->date_from.'","'.$this->date_to.'",@content,@success,@msg)';
+			
+			break;
+			
+			case "HouseRaspechatkaKv":
+			      $this->sql='CALL '.$this->base.'.HouseRaspechatkaKv('.$this->house_id.',"'.$this->sdata.'",@head,@content,@foot,@success,@msg)';
+			  //  print_r($this->sql); 
+			break;
+			case "HouseKvRaspechatkaKv":
+			      $this->sql='CALL '.$this->base.'.HouseKvRaspechatkaKv('.$this->house_id.',"'.$this->address_ot.'","'.$this->address_do.'","'.$this->sdata.'",@head,@content,@foot,@success,@msg)';
+			  //  print_r($this->sql); 
+			break;
+	
+
+			
+		}
+		
+		$this->result = $_db->query($this->sql) or die('Connect Error in '.$this->what.' ('.$this->sql.') ' . $_db->connect_error);
+		
+		$this->sql_callback='SELECT @head,@content,@foot,@success,@msg';
+
+		$this->res_callback = $_db->query($this->sql_callback) or die('Connect Error >>>  ' . $_db->connect_errno . '  <<< ' . $_db->connect_error);
+		
+		while ($this->row = $this->res_callback->fetch_assoc()) {
+			$this->results['head'] = $this->row['@head'];
+			$this->results['content'] = $this->row['@content'];
+			$this->results['sql'] = $this->sql;
+			$this->results['foot'] = $this->row['@foot'];
+			$this->results['success'] = $this->row['@success'];
+			$this->results['msg'] = $this->row['@msg'];
+
+		}
+			
+		/*include_once('absent_file.php')*/
+
+
+		return $this->results;
+
+}
+
+
+}

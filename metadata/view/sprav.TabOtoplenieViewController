@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "tabotoplenie",
+        "designer|userClassName": "sprav.TabOtoplenieViewController"
+    },
+    "name": "sprav.TabEnergyViewController1",
+    "designerId": "1ce2c37e-e855-4746-b525-7b3b8ee495b5"
+}

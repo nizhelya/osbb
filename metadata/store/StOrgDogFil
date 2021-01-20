@@ -1,0 +1,75 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": null,
+        "autoSync": null,
+        "designer|userAlias": "stOrgDogFil",
+        "designer|userClassName": "StOrgDogFil",
+        "groupField": null,
+        "model": "MdOrgDogFil",
+        "sortOnLoad": false,
+        "storeId": "stOrgDogFil"
+    },
+    "designerId": "d3a9d955-2710-4da3-968c-0258fc6db380",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{",
+                    "create: 'QueryOrg.createRecord',",
+                    "read: 'QueryOrg.getResults',",
+                    "update: 'QueryOrg.updateRecords',",
+                    "destroy: 'QueryOrg.destroyRecord'",
+                    "}"
+                ],
+                "directFn": null,
+                "extraParams": [
+                    " {'what':'OrgDogFil',",
+                    " 'what_id':'',",
+                    "  'id':''}"
+                ]
+            },
+            "name": "MyDirectProxy60",
+            "designerId": "19905a0a-9e9f-4fba-a3f2-a78978ff7666",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader62",
+                    "designerId": "077d0258-e76e-469b-bcaa-3641221cb766"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "nameProperty": "login, password"
+                    },
+                    "name": "MyJsonWriter10",
+                    "designerId": "22ca240c-a5e2-4c59-9a56-fa5b68dcdfaa"
+                }
+            ]
+        }
+    ]
+}

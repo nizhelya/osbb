@@ -1,0 +1,50 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "stAllPokDVodomera",
+        "designer|userClassName": "StAllPokDVodomera",
+        "model": "MdPriborUcheta",
+        "remoteFilter": true,
+        "remoteSort": true,
+        "storeId": "stAllPokDVodomera"
+    },
+    "designerId": "6752f42f-fc7b-4a6a-80fc-f9ebe26f5dd0",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "QueryVodomer.getResults",
+                "extraParams": [
+                    "{'what':'AllPokDVodomera'}"
+                ]
+            },
+            "name": "MyDirectProxy63",
+            "designerId": "42c0a286-3c38-423b-9e87-b3602e6989f8",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader65",
+                    "designerId": "97d6ca3f-99fe-418e-a0e0-19c25b5e4681"
+                }
+            ]
+        }
+    ]
+}

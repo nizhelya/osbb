@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "taborg",
+        "designer|userClassName": "sprav.TabOrgViewController"
+    },
+    "name": "undefinedViewController",
+    "designerId": "37127c0d-5379-4161-a705-16403aa46122"
+}

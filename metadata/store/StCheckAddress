@@ -1,0 +1,46 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": null,
+        "designer|userAlias": "stCheckAddress",
+        "designer|userClassName": "StCheckAddress",
+        "model": "MdCheckAddress",
+        "storeId": "stCheckAddress"
+    },
+    "designerId": "550c75b6-129e-4c28-ae78-d0052de54a27",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "QuerySprav.getResults"
+            },
+            "name": "MyDirectProxy88",
+            "designerId": "7e0d6233-786d-4f9b-8fd1-d5d0de88393a",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader90",
+                    "designerId": "ff0ffd41-c124-48f0-8ccb-b80f1093dbf1"
+                }
+            ]
+        }
+    ]
+}

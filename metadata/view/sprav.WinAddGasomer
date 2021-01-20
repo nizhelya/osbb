@@ -1,0 +1,746 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "winaddgasomer",
+        "designer|userClassName": "sprav.WinAddGasomer",
+        "height": 488,
+        "id": "winAddGasomer",
+        "itemId": null,
+        "layout": "fit",
+        "modal": true,
+        "title": "Подключение или редактирование нового газовошо счетчика",
+        "width": 568
+    },
+    "name": "sprav.WinAddEnergomer1",
+    "configAlternates": {
+        "scrollable": "boolean"
+    },
+    "designerId": "28a4bf49-f0aa-4b7a-a013-34e84d63ebbc",
+    "viewControllerInstanceId": "9b25e5cf-6eb3-43f9-addb-bc8b0b9c20bd",
+    "viewModelInstanceId": "af50e3b3-a226-4f5b-a126-b6e8e2b4ebfa",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": null,
+                "designer|snapToGrid": 5,
+                "height": 560,
+                "id": "fmAddGasomer",
+                "itemId": null,
+                "layout": "absolute",
+                "title": "",
+                "width": 530
+            },
+            "name": "MyForm46",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "420db9f4-1c7f-4cd8-a301-2b07afe43a06",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "layout|x": 0,
+                        "layout|y": 0,
+                        "name": "what"
+                    },
+                    "name": "MyHiddenField29",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "b257f6bd-a49c-4258-bfa3-033a88b6a2a8"
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "layout|x": 0,
+                        "layout|y": 0,
+                        "name": "gasomer_id"
+                    },
+                    "name": "MyHiddenField30",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "424f760f-e4c4-418b-ad3d-62f76c470395"
+                },
+                {
+                    "type": "Ext.form.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": "Подключить существующий счетчик",
+                        "fieldLabel": "",
+                        "hideEmptyLabel": false,
+                        "id": "chkExistentGasomer",
+                        "inputValue": "1",
+                        "itemId": null,
+                        "labelWidth": 20,
+                        "layout|x": 255,
+                        "layout|y": 25,
+                        "name": "isjoint",
+                        "style": "background-color: #DCDCDC;",
+                        "submitValue": false,
+                        "uncheckedValue": "0",
+                        "validateOnChange": false
+                    },
+                    "name": "MyCheckbox89",
+                    "configAlternates": {
+                        "style": "string",
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "54c679f8-d306-41c4-9709-84fe7e0dbf9a",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onChkExistentGasomerChange",
+                                "implHandler": [
+                                    "var cnt = Ext.getCmp('fcntNewGasomer');",
+                                    "var cb = Ext.getCmp('cbExistentGasomer');",
+                                    "var form = field.findParentByType('form');",
+                                    "",
+                                    "if (newValue) {",
+                                    "    cnt.hide();",
+                                    "    cb.show();",
+                                    "    cb.clearValue();",
+                                    "",
+                                    "form.down('#btAddGasomer').setDisabled(true);",
+                                    "",
+                                    "}",
+                                    "else {",
+                                    "    cnt.show();",
+                                    "    cb.hide();",
+                                    "form.down('#btAddGasomer').setDisabled(false);",
+                                    "",
+                                    "}",
+                                    ""
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onChkExistentGasomerChange",
+                            "designerId": "d384fc4d-dd19-4731-b671-16f3b55e6c65"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "nomer",
+                        "fieldLabel": "Номер",
+                        "hidden": true,
+                        "id": "cbExistentGasomer",
+                        "itemId": null,
+                        "labelWidth": 60,
+                        "layout|x": 260,
+                        "layout|y": 60,
+                        "name": "joint_id",
+                        "store": "StExistentEnergomer",
+                        "valueField": "energomer_id",
+                        "width": 260
+                    },
+                    "name": "MyComboBox64",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "0e735ecd-31a4-44f3-9233-35f7f3e78cfa",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onCbExistentGasomerSelect",
+                                "implHandler": [
+                                    "var form = combo.findParentByType('form');",
+                                    "form.down('#btAddGasomer').setDisabled(false);",
+                                    ""
+                                ],
+                                "name": "select",
+                                "scope": "me"
+                            },
+                            "name": "onCbExistentGasomerSelect",
+                            "designerId": "1281b61a-d4f0-41bd-bbec-f29ece390d91"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "formBind": true,
+                        "height": null,
+                        "icon": "resources/css/images/ico/add.png",
+                        "id": "btAddGasomer",
+                        "itemId": null,
+                        "layout|x": 335,
+                        "layout|y": 400,
+                        "text": "Добавить счетчик",
+                        "width": 185
+                    },
+                    "name": "MyButton160",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "89dbf58c-31e4-40cd-8d94-eae8752ee4ef"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": null,
+                        "icon": "resources/css/images/ico/delete.png",
+                        "layout|x": 35,
+                        "layout|y": 400,
+                        "text": "Отмена",
+                        "width": 80
+                    },
+                    "name": "MyButton161",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "611a97ff-6609-45f2-8d5e-2e41f2ffef86",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "button.up('#winAddGasomer').close();"
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "a5d0bcc7-6b82-4d99-bfb5-b6e3b152316d"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|snapToGrid": 5,
+                        "height": 290,
+                        "id": "fcntNewGasomer",
+                        "layout": "absolute",
+                        "layout|x": 35,
+                        "layout|y": 95,
+                        "margin": null,
+                        "style": "background-color: #DCDCDC;",
+                        "title": "",
+                        "width": 485
+                    },
+                    "name": "MyFieldSet181",
+                    "configAlternates": {
+                        "style": "string",
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "aac782a2-77de-4039-bc89-cda127cfb548",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Number",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "blankText": "Поле обязательное для заполнения",
+                                "decimalPrecision": 0,
+                                "fieldLabel": "Первичное показание",
+                                "formBind": null,
+                                "hideTrigger": true,
+                                "labelAlign": "top",
+                                "labelWidth": 150,
+                                "layout|anchor": null,
+                                "layout|x": 315,
+                                "layout|y": 220,
+                                "minValue": 0,
+                                "name": "tek",
+                                "validateBlank": true,
+                                "value": [
+                                    "0"
+                                ],
+                                "width": 145
+                            },
+                            "name": "MyNumberField254",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "01ab990f-aebc-4808-bc60-bc0dfa384e15"
+                        },
+                        {
+                            "type": "Ext.form.field.Date",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "fieldLabel": "дата ввода ",
+                                "format": "d-m-Y",
+                                "labelAlign": "top",
+                                "labelWidth": 150,
+                                "layout|x": 315,
+                                "layout|y": 100,
+                                "name": "sdate",
+                                "submitFormat": "Ymd",
+                                "width": 145
+                            },
+                            "name": "MyDateField80",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "e8a6f9df-e63f-4f1c-b206-4fbfe6b4a9a0"
+                        },
+                        {
+                            "type": "Ext.form.field.Date",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "дата поверки ",
+                                "format": "d-m-Y",
+                                "labelAlign": "top",
+                                "labelWidth": 150,
+                                "layout|x": 5,
+                                "layout|y": 100,
+                                "name": "pdate",
+                                "submitFormat": "Ymd",
+                                "width": 140
+                            },
+                            "name": "MyDateField81",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "cd40464e-14dc-465a-b425-e2b206b98a74"
+                        },
+                        {
+                            "type": "Ext.form.field.Date",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Следующая поверка ",
+                                "format": "d-m-Y",
+                                "labelAlign": "top",
+                                "labelWidth": 150,
+                                "layout|x": 5,
+                                "layout|y": 160,
+                                "name": "fpdate",
+                                "submitFormat": "Ymd",
+                                "width": 140
+                            },
+                            "name": "MyDateField82",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "cf5fdafe-2bfa-42eb-9af0-bd18f897eccb"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Общий",
+                                "fieldLabel": "",
+                                "id": "jointGasomer",
+                                "inputValue": "1",
+                                "itemId": null,
+                                "layout|x": 360,
+                                "layout|y": 35,
+                                "name": "joint",
+                                "uncheckedValue": "0"
+                            },
+                            "name": "MyCheckbox93",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "0da23e0e-82ac-4a99-9a0c-e6e3fc226b4e"
+                        },
+                        {
+                            "type": "Ext.form.RadioGroup",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "columns": 1,
+                                "fieldLabel": "Место установки",
+                                "height": 160,
+                                "id": "rbgPlace2",
+                                "labelAlign": "top",
+                                "layout|x": 165,
+                                "layout|y": 110,
+                                "style": "background-color: #F1EEEE ;",
+                                "width": 130
+                            },
+                            "name": "MyRadioGroup11",
+                            "configAlternates": {
+                                "columns": "number",
+                                "style": "string",
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "c55866eb-00fa-4b0c-b792-59fbfcfef8ed",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "Блок",
+                                        "checked": true,
+                                        "fieldLabel": null,
+                                        "inputValue": "блок",
+                                        "labelWidth": 80,
+                                        "name": "place"
+                                    },
+                                    "name": "MyRadio33",
+                                    "configAlternates": {
+                                        "scrollable": "boolean"
+                                    },
+                                    "designerId": "02cd2e0e-0c05-40bc-a3a1-dcfa2e5940eb"
+                                },
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "Коридор",
+                                        "fieldLabel": null,
+                                        "inputValue": "Коридор",
+                                        "name": "place"
+                                    },
+                                    "name": "MyRadio34",
+                                    "configAlternates": {
+                                        "scrollable": "boolean"
+                                    },
+                                    "designerId": "818c8857-516b-46e0-8509-055ac8e0fd4e"
+                                },
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "Кухня",
+                                        "fieldLabel": null,
+                                        "inputValue": "Кухня",
+                                        "name": "place"
+                                    },
+                                    "name": "MyRadio35",
+                                    "configAlternates": {
+                                        "scrollable": "boolean"
+                                    },
+                                    "designerId": "f8183f28-de53-432e-a2b9-03b317911b2b"
+                                },
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "ПРУ",
+                                        "fieldLabel": null,
+                                        "inputValue": "ПРУ",
+                                        "name": "place"
+                                    },
+                                    "name": "MyRadio36",
+                                    "configAlternates": {
+                                        "scrollable": "boolean"
+                                    },
+                                    "designerId": "20f4b1de-d905-45f1-83a2-595faeee8749"
+                                },
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "Другое",
+                                        "fieldLabel": null,
+                                        "inputValue": "Другое",
+                                        "name": "place"
+                                    },
+                                    "name": "MyRadio39",
+                                    "configAlternates": {
+                                        "scrollable": "boolean"
+                                    },
+                                    "designerId": "1cb7fa79-6aa5-4e57-b19c-9b3349e91e0d"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "blankText": "Поле обязательное для заполнения",
+                                "fieldLabel": "Номер",
+                                "formBind": false,
+                                "id": null,
+                                "itemId": null,
+                                "labelWidth": 60,
+                                "layout|anchor": null,
+                                "layout|x": 60,
+                                "layout|y": 15,
+                                "name": "nomer",
+                                "width": 250
+                            },
+                            "name": "MyTextField165",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "222274b1-f2a7-4354-833d-f285d1ef0c23"
+                        },
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "displayField": "model",
+                                "fieldLabel": "Модель",
+                                "formBind": false,
+                                "id": "cbGasomerModel",
+                                "itemId": null,
+                                "labelWidth": 60,
+                                "layout|anchor": null,
+                                "layout|x": 60,
+                                "layout|y": 60,
+                                "name": "model_id",
+                                "queryMode": "local",
+                                "store": "StGmodel",
+                                "value": null,
+                                "valueField": "model_id",
+                                "width": 250
+                            },
+                            "name": "MyComboBox2",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "a6e42855-cf14-4f6d-be36-d5cf2cb27f06"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "№ пломбы",
+                                "labelAlign": "top",
+                                "layout|x": 5,
+                                "layout|y": 220,
+                                "name": "plomba",
+                                "width": 140
+                            },
+                            "name": "MyTextField166",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "739fe237-0baf-4c49-ac4f-527bc7a80e24"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "№ заводской пломбы",
+                                "labelAlign": "top",
+                                "layout|x": 315,
+                                "layout|y": 155,
+                                "name": "zplomba",
+                                "width": 145
+                            },
+                            "name": "MyTextField167",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "70b667a8-5e3d-4c85-a688-c842a5841615"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "текущий адрес_ид",
+                        "id": null,
+                        "labelWidth": 120,
+                        "layout|x": 35,
+                        "layout|y": 25,
+                        "name": "address_id",
+                        "style": "background-color: #DCDCDC;",
+                        "width": 185
+                    },
+                    "name": "MyTextField168",
+                    "configAlternates": {
+                        "style": "string",
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "1bdff6d8-9431-4867-ae3a-91e48c160ccf"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "fieldLabel": "новый  адрес_ид",
+                        "id": null,
+                        "labelWidth": 120,
+                        "layout|x": 35,
+                        "layout|y": 60,
+                        "name": "new_address_id",
+                        "style": "background-color: #DCDCDC;",
+                        "width": 185
+                    },
+                    "name": "MyTextField2",
+                    "configAlternates": {
+                        "style": "string",
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "d803c148-5d61-47e5-bd7b-d0f2c82898e8",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onTextfieldChange",
+                                "implHandler": [
+                                    "var form = field.findParentByType('form');",
+                                    "    form.down('#btAddGasomer').setDisabled(false);",
+                                    ""
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onTextfieldChange",
+                            "designerId": "ca254b4d-9d8f-4f20-9da9-a6aff3938530"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "name": "dgasomer_id"
+                    },
+                    "name": "MyHiddenField31",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "f1f5e3f2-1b39-47fa-9ed0-de281bd70269"
+                }
+            ]
+        }
+    ]
+}

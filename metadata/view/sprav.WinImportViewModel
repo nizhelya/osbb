@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "winimport",
+        "designer|userClassName": "sprav.WinImportViewModel"
+    },
+    "designerId": "9c25bd99-8db1-4ce0-bdf4-f0319b3110a7"
+}

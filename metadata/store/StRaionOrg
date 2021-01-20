@@ -1,0 +1,49 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "stRaionOrg",
+        "designer|userClassName": "StRaionOrg",
+        "model": "MdRaion",
+        "storeId": "stRaionOrg"
+    },
+    "designerId": "adf81a60-91e3-4b5d-9c74-54e6d9ea54b0",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "QueryLoad.getResults",
+                "extraParams": [
+                    "{'what':'raion'}"
+                ]
+            },
+            "name": "MyDirectProxy19",
+            "designerId": "b9c053ba-2699-406e-9c75-7890ee49b920",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader19",
+                    "designerId": "2d021a01-19f1-46d1-b667-d9413a0d2a50"
+                }
+            ]
+        }
+    ]
+}

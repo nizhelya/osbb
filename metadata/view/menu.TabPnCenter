@@ -1,0 +1,274 @@
+{
+    "type": "Ext.tab.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "activeTab": 8,
+        "border": false,
+        "designer|userAlias": "tabpncenter",
+        "designer|userClassName": "menu.TabPnCenter",
+        "height": null,
+        "id": "tabPnCenter",
+        "width": null
+    },
+    "configAlternates": {
+        "scrollable": "boolean"
+    },
+    "designerId": "89a2e8e3-020d-40c4-9f6b-56938a6d2186",
+    "viewControllerInstanceId": "fcda3646-eae4-436a-b354-4656672d2d30",
+    "viewModelInstanceId": "9d80c82b-6254-4338-9475-3bea5a18c795",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "flat.tabkassa",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "631fbd7f-5615-4ae0-b9c9-44c86a4d9c19",
+            "masterInstanceId": "e60ecbb0-316f-4daa-8aae-0cde9883ce7d",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "TabConfig13",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "3ac62777-b07f-4f0c-a172-0c3a998bdc9f"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "flat.tabappbti",
+            "designerId": "109423ce-f2d0-4588-8e21-c218896e1016",
+            "masterInstanceId": "2dbacc12-86bb-49f8-bd24-a5fd7d2dd557",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "TabConfig7",
+                    "designerId": "ff1709d8-3714-49ef-aa5e-ee2c872b6431"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "flat.tabnachapp",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "732814c7-dc84-4950-9417-41e2e8c003e5",
+            "masterInstanceId": "50d35cf7-6496-4f3f-b168-a660c39fab66",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "TabConfig15",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "5212bec6-a01b-4d0a-8edf-56a239507d45"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "flat.tabappvodomer",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "3d548712-e7fb-4f60-83cf-d47293474472",
+            "masterInstanceId": "561c7ad4-9b68-4dc0-856a-1118b53ef1f9",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "TabConfig16",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "e5f1ac08-19f5-49f3-bfba-cbfc8a51a32c"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "flat.tabappenergomer",
+            "designerId": "81a51d77-dc2d-4dfd-ae5e-57eff66f086d",
+            "masterInstanceId": "6eb9e46b-f734-44aa-b3ea-ca30c343a456",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "TabConfig8",
+                    "designerId": "8437a6b2-1a74-492d-87c9-d3317928f0fc"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "flat.tabappgasomer",
+            "designerId": "a1004426-8af6-442e-b4e8-72f63fdea7cc",
+            "masterInstanceId": "f572483f-a549-4b39-87c2-65310cceb4d3",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "TabConfig9",
+                    "designerId": "0ef642db-8595-4636-a301-425c0cf25475"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "flat.tabappteplomer",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "508b9074-6cc6-4fd8-a573-e478fa3694dc",
+            "masterInstanceId": "36a8621a-6789-4118-ade5-3f4476148a83",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "TabConfig17",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "aedf6d0d-17f2-4c46-ab1c-a09cf305c551"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Оплата"
+            },
+            "name": "flat.taboplata",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "42611f70-4332-4893-99b9-3ed840c2c1b8",
+            "masterInstanceId": "9bb7b6ca-fa03-4f6d-bb7a-696c9cb65461",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "TabConfig25",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "beb9c678-07d2-438e-9bd8-0af7f68c6603"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "My Tab"
+            },
+            "name": "sprav.tablogin",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "8a21154e-2be1-4525-a824-9bd38931fff1",
+            "masterInstanceId": "591baf9a-cd3b-42dd-b91e-52ce6654a67a",
+            "cn": [
+                {
+                    "type": "Ext.tab.Tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "TabConfig12",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "7a180e8e-58ba-4d52-b93b-c1e7cf82f2f9"
+                }
+            ]
+        }
+    ]
+}

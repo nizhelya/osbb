@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "winaddvodomer",
+        "designer|userClassName": "sprav.WinAddVodomerViewModel"
+    },
+    "designerId": "9827884a-8550-42bc-963c-a13fc8aca204"
+}

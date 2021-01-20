@@ -1,0 +1,45 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "stHeatHouse",
+        "designer|userClassName": "StHeatHouse",
+        "model": "MdPriborUcheta",
+        "storeId": "stHeatHouse"
+    },
+    "designerId": "59363b8f-12ee-4ccc-b90c-ff8f6aedc7a7",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "QueryTeplomer.getResults"
+            },
+            "name": "MyDirectProxy90",
+            "designerId": "d1871f20-de35-4dbd-bd84-c258a7134e69",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader92",
+                    "designerId": "99d0fbbc-7e7f-4049-8da3-6800349fb1f0"
+                }
+            ]
+        }
+    ]
+}

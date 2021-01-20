@@ -1,0 +1,81 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MdEnergyTarif"
+    },
+    "name": "MdTboTarif1",
+    "designerId": "d5324a2d-a19b-4c94-9622-fee38e76bf2d",
+    "cn": [
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "usluga"
+            },
+            "name": "MyString221",
+            "designerId": "c6926631-94a4-4272-bbea-2e4aa6c0398a"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tarif"
+            },
+            "name": "MyString222",
+            "designerId": "2f31c86f-5c4e-4332-9902-a2a364c91e38"
+        },
+        {
+            "type": "Ext.data.proxy.Memory",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "data": [
+                    "[",
+                    "{",
+                    "'usluga': 'Тариф по электроэнергии',",
+                    "'tarif': 'energy'",
+                    "},",
+                    "{",
+                    "'usluga': 'Перерасчет по электроэнергии',",
+                    "'tarif': 'ch_energy'",
+                    "},",
+                    "{",
+                    "'usluga': 'Кол-во кВт по домовому эл.сч-ку',",
+                    "'tarif': 'kwh_nach'",
+                    "},",
+                    "{",
+                    "'usluga': 'На основного льготника',",
+                    "'tarif': 'kwh_osn_lg'",
+                    "},",
+                    "{",
+                    "'usluga': 'На каждого следующего льготника',",
+                    "'tarif': 'kwh_dop_lg'",
+                    "},",
+                    "{",
+                    "'usluga': 'Лимит кВт на всех льготников',",
+                    "'tarif': 'kwh_end_lg'",
+                    "}",
+                    "]"
+                ]
+            },
+            "name": "MyMemoryProxy",
+            "designerId": "c4d7f337-26ee-4e6a-b827-1485e7767f0b"
+        }
+    ]
+}

@@ -1,0 +1,74 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "data": [
+            "[",
+            "{",
+            "\"usluga\": \"Отопл за 1Гкал\",",
+            "\"tarif\": \"otoplenie\"",
+            "},",
+            "{",
+            "\"usluga\": \"Отопл за 1м2\",",
+            "\"tarif\": \"aotoplenie\"",
+            "},",
+            "{",
+            "\"usluga\": \"пер_отоп 1м2\",",
+            "\"tarif\": \"ch_aotoplenie\"",
+            "},",
+            "",
+            "{",
+            "\"usluga\": \"Гкал/м2 льг\",",
+            "\"tarif\": \"gkm2_lg\"",
+            "}",
+            "]"
+        ],
+        "designer|userAlias": "stTeploTarif",
+        "designer|userClassName": "StTeploTarif",
+        "storeId": "stTeploTarif"
+    },
+    "designerId": "19396ebc-ea8f-41c7-b044-9f402ff3f405",
+    "cn": [
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "usluga"
+            },
+            "name": "MyString216",
+            "designerId": "30f14687-4539-4fc7-b7fb-352c8bfc6832"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tarif"
+            },
+            "name": "MyString217",
+            "designerId": "e5f23748-e1b0-4707-923c-383ffc90b27b"
+        },
+        {
+            "type": "Ext.data.proxy.Memory",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyMemoryProxy2",
+            "designerId": "d2cfb277-5698-4b26-bd12-0c3b67130fba"
+        }
+    ]
+}

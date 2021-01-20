@@ -1,0 +1,51 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": null,
+        "autoSync": null,
+        "designer|userAlias": "stBanks",
+        "designer|userClassName": "StBanks",
+        "model": "MdBanks",
+        "storeId": "stBanks"
+    },
+    "designerId": "9482f3b8-e3c5-4d87-a5db-a5f110d13d44",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": null,
+                "directFn": "QueryLoad.getResults",
+                "extraParams": [
+                    " {'what':'Bank'}"
+                ]
+            },
+            "name": "MyDirectProxy82",
+            "designerId": "fdff85ac-2b14-4865-b42b-3f56c3b4a14c",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader84",
+                    "designerId": "605295cd-f009-4a2b-b4d7-f4b92217eb4d"
+                }
+            ]
+        }
+    ]
+}

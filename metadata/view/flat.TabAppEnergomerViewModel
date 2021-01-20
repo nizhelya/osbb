@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "flattabappenergomer",
+        "designer|userClassName": "flat.TabAppEnergomerViewModel"
+    },
+    "name": "flat.TabAppVodomerViewModel1",
+    "designerId": "006dd6a5-521c-4e10-9023-927820144c8b"
+}

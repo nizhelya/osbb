@@ -1,0 +1,369 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "winaddteplomer",
+        "designer|userClassName": "sprav.winAddTeplomer",
+        "height": 486,
+        "id": "winAddTeplomer",
+        "itemId": null,
+        "layout": "fit",
+        "modal": true,
+        "title": "Ввод нового тепломера",
+        "width": 466
+    },
+    "configAlternates": {
+        "scrollable": "boolean"
+    },
+    "designerId": "16d689a4-889e-44e7-834c-5ba7b1f657c8",
+    "viewControllerInstanceId": "bf7da0e4-ff46-48a8-90f1-b5c5eb76f591",
+    "viewModelInstanceId": "bb9f08e0-8284-4781-936d-2edf255619d1",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "designer|snapToGrid": 5,
+                "height": 441,
+                "id": "fmAddTeplomer",
+                "itemId": null,
+                "layout": "absolute",
+                "title": ""
+            },
+            "name": "MyForm45",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "75fbb325-27f7-432e-9ab9-f36c7eebfdd9",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "name": "teplomer_id"
+                    },
+                    "name": "MyHiddenField28",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "a1606ff2-1f3f-44ef-9f13-451ef4ac63b6"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "formBind": true,
+                        "height": null,
+                        "icon": "resources/css/images/ico/add.png",
+                        "id": "btAddTeplomer",
+                        "itemId": null,
+                        "layout|x": 240,
+                        "layout|y": 400,
+                        "text": "Добавить тепломер",
+                        "width": 180
+                    },
+                    "name": "MyButton158",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "a41279a0-73f3-422b-9224-a9297733c5d0"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": null,
+                        "icon": "resources/css/images/ico/delete.png",
+                        "layout|x": 40,
+                        "layout|y": 400,
+                        "text": "Отмена",
+                        "width": 80
+                    },
+                    "name": "MyButton159",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "a54995b5-0fef-4431-8d48-a5bfacc55a78",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "this.up('#winAddTeplomer').close();"
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "3042c243-6a21-4027-85f3-e66e413dad01"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "ЕдИзм",
+                        "designer|snapToGrid": 10,
+                        "height": 310,
+                        "layout": "absolute",
+                        "layout|x": 30,
+                        "layout|y": 70,
+                        "style": "background-color: #DCDCDC;",
+                        "title": "",
+                        "width": 390
+                    },
+                    "name": "MyFieldSet180",
+                    "configAlternates": {
+                        "style": "string",
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "7ff362d5-f464-45e7-b250-6155982409b5",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Number",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "blankText": "Поле обязательное для заполнения",
+                                "decimalPrecision": 11,
+                                "fieldLabel": "коеффициент пересчета",
+                                "formBind": false,
+                                "hideTrigger": true,
+                                "id": "koefEdIzmT",
+                                "labelWidth": 180,
+                                "layout|anchor": null,
+                                "layout|x": 30,
+                                "layout|y": 150,
+                                "name": "koef",
+                                "width": 300
+                            },
+                            "name": "MyNumberField252",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "18cd1bb4-a03d-444c-9ced-b6c2477034ce"
+                        },
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "displayField": "edizm",
+                                "fieldLabel": "Единица измерения",
+                                "labelWidth": 180,
+                                "layout|x": 30,
+                                "layout|y": 110,
+                                "name": "edizm",
+                                "queryMode": "local",
+                                "store": "StEdIzm",
+                                "valueField": "koef",
+                                "width": 300
+                            },
+                            "name": "MyComboBox62",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "026f5dc1-93ee-4f84-970d-e90394fff596",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onComboboxSelect1",
+                                        "implHandler": [
+                                            "var koefEdIzm = Ext.getCmp('koefEdIzmT');",
+                                            "var selected = record;",
+                                            "if (selected) {",
+                                            "    koefEdIzm.setValue(selected.get('koef'));",
+                                            "}"
+                                        ],
+                                        "name": "select",
+                                        "scope": "me"
+                                    },
+                                    "name": "onComboboxSelect1",
+                                    "designerId": "eacaea40-13db-4c97-83af-97dad2a35b08"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "blankText": "Поле обязательное для заполнения",
+                                "fieldLabel": "Номер тепломера",
+                                "formBind": false,
+                                "labelWidth": 180,
+                                "layout|anchor": null,
+                                "layout|x": 30,
+                                "layout|y": 20,
+                                "name": "nomer",
+                                "width": 300
+                            },
+                            "name": "MyTextField164",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "ad83292a-206d-440d-8e6c-8b37531b7ac0"
+                        },
+                        {
+                            "type": "Ext.form.field.Date",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "дата ввода  в зксплуатацию",
+                                "format": "d-m-Y",
+                                "labelWidth": 180,
+                                "layout|x": 30,
+                                "layout|y": 60,
+                                "name": "sdate",
+                                "submitFormat": "Ymd",
+                                "width": 300
+                            },
+                            "name": "MyDateField78",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "6cedd725-b70a-4687-bace-4e907b69b6ef"
+                        },
+                        {
+                            "type": "Ext.form.field.Date",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "дата последней поверки ",
+                                "format": "d-m-Y",
+                                "labelWidth": 180,
+                                "layout|x": 30,
+                                "layout|y": 200,
+                                "name": "pdate",
+                                "submitFormat": "Ymd",
+                                "width": 300
+                            },
+                            "name": "MyDateField79",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "7c2e3e4c-c29a-4eef-b227-822c6c036444"
+                        },
+                        {
+                            "type": "Ext.form.field.Number",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "blankText": "Поле обязательное для заполнения",
+                                "decimalPrecision": 6,
+                                "fieldLabel": "Первичное показание",
+                                "formBind": false,
+                                "hideTrigger": true,
+                                "labelWidth": 180,
+                                "layout|anchor": null,
+                                "layout|x": 30,
+                                "layout|y": 250,
+                                "name": "tek",
+                                "width": 300
+                            },
+                            "name": "MyNumberField253",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "00c09c1d-3d16-4ee3-8a92-659a98a5edbe"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "displayField": "model",
+                        "fieldLabel": "Модель",
+                        "formBind": false,
+                        "id": null,
+                        "labelWidth": 70,
+                        "layout|anchor": null,
+                        "layout|x": 85,
+                        "layout|y": 25,
+                        "name": "model_id",
+                        "queryMode": "local",
+                        "store": "StTmodel",
+                        "style": "background-color: #DCDCDC;",
+                        "value": null,
+                        "valueField": "model_id",
+                        "width": 270
+                    },
+                    "name": "MyComboBox63",
+                    "configAlternates": {
+                        "style": "string",
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "4802bf8c-5fc6-485d-b325-65a25f5c82ad"
+                }
+            ]
+        }
+    ]
+}

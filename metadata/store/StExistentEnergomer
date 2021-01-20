@@ -1,0 +1,82 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "StExistentEnergomer",
+        "model": "MdPriborUcheta",
+        "storeId": "StExistentEnergomer"
+    },
+    "name": "StExistentVod1",
+    "designerId": "792c7e82-4665-413a-b248-9a650ae88489",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "QueryEnergomer.getResults",
+                "extraParams": [
+                    "{what:'ExistentEnergomer'}"
+                ]
+            },
+            "name": "MyDirectProxy57",
+            "designerId": "65602a1e-c485-4e0c-ab8a-850c7e55317f",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader59",
+                    "designerId": "a8713f5e-61f0-4ed6-a9b9-7e88d2fec02e"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onDirectstoreBeforeLoad",
+                "implHandler": [
+                    "var stUser = Ext.data.StoreManager.get(\"StUser\");",
+                    "//LOGIN & PASSWORD",
+                    "var values =stUser.getAt(0);",
+                    "var login = values.get('login');",
+                    "var password = values.get('password');",
+                    "",
+                    "var house_id = values.get('house_id');",
+                    "",
+                    "",
+                    "",
+                    "store.getProxy().extraParams = {",
+                    "    what: \"ExistentEnergomer\",",
+                    "    what_id: house_id,",
+                    "    house_id: house_id,",
+                    "    login:login,",
+                    "    password:password",
+                    "};"
+                ],
+                "name": "beforeload",
+                "scope": "me"
+            },
+            "name": "onDirectstoreBeforeLoad",
+            "designerId": "4f3d029b-a941-4708-9c4a-2d66c0e9ed5d"
+        }
+    ]
+}

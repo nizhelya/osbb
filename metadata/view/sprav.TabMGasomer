@@ -1,0 +1,385 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "closable": true,
+        "designer|userAlias": "tabmgasomer",
+        "designer|userClassName": "sprav.TabMGasomer",
+        "height": null,
+        "id": null,
+        "itemId": null,
+        "layout": "fit",
+        "scrollable": true,
+        "title": "Модели газовых счетчиков",
+        "width": null
+    },
+    "name": "sprav.TabMVodomer1",
+    "configAlternates": {
+        "scrollable": "boolean"
+    },
+    "designerId": "59d7eb12-092a-49ac-9afe-30a5b5509b54",
+    "viewControllerInstanceId": "98696360-16e2-4a72-bc05-768892927025",
+    "viewModelInstanceId": "bbae5bef-f35a-4a91-9f51-c98748579d0b",
+    "cn": [
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "forceFit": null,
+                "id": "grGmodel",
+                "scrollable": true,
+                "store": "StGmodel",
+                "title": "Ввод и редактированние моделей  счеткиков воды",
+                "width": 522
+            },
+            "name": "MyGridPanel51",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "1841bae1-5ad0-46ca-89a7-e7c0b7a66a13",
+            "cn": [
+                {
+                    "type": "Ext.view.Table",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": null
+                    },
+                    "name": "MyGridView51",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "48b59359-e983-4bd1-9762-ee753fccefff"
+                },
+                {
+                    "type": "Ext.grid.column.Number",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "model_id",
+                        "hidden": true,
+                        "text": "Ид"
+                    },
+                    "name": "MyNumberColumn256",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "4e22f07a-bd60-4a68-b8a8-340b80ca1cbf"
+                },
+                {
+                    "type": "Ext.selection.CheckboxModel",
+                    "reference": {
+                        "name": "selModel",
+                        "type": "object"
+                    },
+                    "codeClass": "Ext.selection.CheckboxModel",
+                    "userConfig": {
+                        "mode": "SINGLE"
+                    },
+                    "name": "MyCheckboxSelectionModel5",
+                    "designerId": "cc50e874-e518-447e-b590-b508625a5fa1"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "model",
+                        "flex": 1,
+                        "text": "Модель",
+                        "width": 799
+                    },
+                    "name": "MyColumn247",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "97ce7a72-ce23-49e8-8273-38dcaa36d72a",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "editor",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "MyTextField142",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "ea73d761-140d-4219-9ef0-c6e735afbd74"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Action",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "altText": null,
+                        "designer|displayName": "Удалить модель",
+                        "icon": null,
+                        "menuDisabled": true,
+                        "tooltip": "Удалить",
+                        "width": 38
+                    },
+                    "name": "MyActionColumn56",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "cd6ec16e-22bc-4178-a01b-742a4da7c4e0",
+                    "cn": [
+                        {
+                            "type": "actioncolumnitem",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "resources/css/images/ico/no.png"
+                            },
+                            "name": "MyActionColumnItem69",
+                            "designerId": "718939d1-6c43-42a3-9035-cd6daab82b31",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "view",
+                                            "rowIndex",
+                                            "colIndex",
+                                            "item",
+                                            "e",
+                                            "record",
+                                            "row"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var grid = view.findParentByType('grid');",
+                                            "var store = view.store;",
+                                            "var plugin = grid.getPlugin('rowEditGmodel');",
+                                            "plugin.cancelEdit();",
+                                            "",
+                                            "Ext.MessageBox.show({",
+                                            "    title: 'Внимание!',",
+                                            "    msg: 'Вы удаляете данные ! Подтвердите свои действия!',",
+                                            "    buttons: Ext.MessageBox.OKCANCEL,",
+                                            "    icon: Ext.MessageBox.WARNING,",
+                                            "",
+                                            "    buttonText:{",
+                                            "        ok: \"Удалить!\",",
+                                            "        cancel: \"Отмена\"",
+                                            "    },",
+                                            "    fn:function(btn){",
+                                            "        if(btn=='ok'){",
+                                            "            store.remove(record);",
+                                            "",
+                                            "            store.sync({",
+                                            "                success: function(){",
+                                            "                    Ext.MessageBox.show({title: 'Удаление записи',",
+                                            "                                         msg:\"Запись удалена\",",
+                                            "                                         buttons: Ext.MessageBox.OK,",
+                                            "                                         icon: Ext.MessageBox.INFO",
+                                            "                                        });",
+                                            "                },",
+                                            "                failure: function(){",
+                                            "                    Ext.MessageBox.show({title: 'Удаление записи',",
+                                            "                                         msg:\"Невозможно удалить: модель используется\",",
+                                            "                                         buttons: Ext.MessageBox.OK,",
+                                            "                                         icon: Ext.MessageBox.ERROR",
+                                            "                                        });",
+                                            "",
+                                            "                },",
+                                            "                scope: this",
+                                            "            });",
+                                            "        }",
+                                            "    }",
+                                            "",
+                                            "});",
+                                            ""
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "85702840-305f-48a3-bea3-8894b0e62cd6"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "value",
+                                    "metaData",
+                                    "record",
+                                    "rowIndex",
+                                    "colIndex",
+                                    "store",
+                                    "view"
+                                ],
+                                "fn": "editRenderer",
+                                "implHandler": [
+                                    "var val=\"\";",
+                                    "return val;"
+                                ]
+                            },
+                            "name": "editRenderer",
+                            "designerId": "e6f175e8-3924-4414-8176-dd327e82e46b"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Tool",
+                    "reference": {
+                        "name": "tools",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "tooltip": "Добавить запись",
+                        "type": "plus"
+                    },
+                    "name": "MyTool29",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "2255100a-7733-4cf8-bbf6-9c40f574ff89",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "owner",
+                                    "tool",
+                                    "event"
+                                ],
+                                "fn": "callback",
+                                "implHandler": [
+                                    "var me = this;",
+                                    "var grid = tool.findParentByType('grid');",
+                                    "var store = grid.store;",
+                                    "var plugin = grid.getPlugin('rowEditGmodel');",
+                                    "",
+                                    "plugin.cancelEdit();",
+                                    "var newRecord = store.model.create();",
+                                    "//newRecord = {\"what\":\"getVmodel\"};",
+                                    "store.insert(0, newRecord);",
+                                    "plugin.startEdit(0, 0);"
+                                ]
+                            },
+                            "name": "callback",
+                            "designerId": "ef43dd6b-e606-474c-9e60-ccd2505f7eb4"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.plugin.RowEditing",
+                    "reference": {
+                        "name": "plugins",
+                        "type": "array"
+                    },
+                    "codeClass": "Ext.grid.plugin.RowEditing",
+                    "userConfig": {
+                        "pluginId": "rowEditGmodel"
+                    },
+                    "name": "MyRowEditingPlugin4",
+                    "designerId": "be76c08b-2d87-4d5d-b3a9-079eeb917a10",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onRowEditingEdit",
+                                "implHandler": [
+                                    "",
+                                    "var grid = editor.grid;",
+                                    "var store = grid.getStore();",
+                                    "var sm = store.getUpdatedRecords();",
+                                    "var data = grid.getSelectionModel();",
+                                    "",
+                                    "if(sm.length) {",
+                                    "    store.sync({",
+                                    "        success: function(){",
+                                    "",
+                                    "            store.load();",
+                                    "",
+                                    "        }",
+                                    "    });",
+                                    "",
+                                    "} else {",
+                                    "    store.sync({",
+                                    "        success: function(){",
+                                    "            Ext.MessageBox.show({",
+                                    "                title: 'Добавление записи',",
+                                    "                msg: 'Запись добавлена',",
+                                    "                buttons: Ext.MessageBox.OK,",
+                                    "                icon: Ext.MessageBox.INFO",
+                                    "            });",
+                                    "",
+                                    "           store.load();",
+                                    "        }",
+                                    "    });",
+                                    "",
+                                    "}",
+                                    ""
+                                ],
+                                "name": "edit",
+                                "scope": "me"
+                            },
+                            "name": "onRowEditingEdit",
+                            "designerId": "6fab2d83-03f2-4c1c-b831-7a16867e737c"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.plugin.BufferedRenderer",
+                    "reference": {
+                        "name": "plugins",
+                        "type": "array"
+                    },
+                    "codeClass": "Ext.grid.plugin.BufferedRenderer",
+                    "name": "MyBufferedRenderer2",
+                    "designerId": "19c37a47-d388-42b4-b9f7-8b9eae0a675b"
+                }
+            ]
+        }
+    ]
+}

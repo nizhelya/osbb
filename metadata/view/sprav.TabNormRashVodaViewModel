@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "tabnormrashvoda",
+        "designer|userClassName": "sprav.TabNormRashVodaViewModel"
+    },
+    "designerId": "981cc604-607e-4ee8-8a79-72b83b90e2d7"
+}

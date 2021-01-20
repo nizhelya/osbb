@@ -1,0 +1,51 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": null,
+        "autoSync": null,
+        "designer|userAlias": "stKoef",
+        "designer|userClassName": "StKoef",
+        "model": "MdKoef",
+        "storeId": "StKoef"
+    },
+    "designerId": "fcfdc921-95ba-4411-80e7-28a2d0078a21",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": null,
+                "directFn": "QueryLoad.getResults",
+                "extraParams": [
+                    " {'what':'Koef'}"
+                ]
+            },
+            "name": "MyDirectProxy69",
+            "designerId": "154f3cd9-869e-4623-b60f-62918d36d953",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader71",
+                    "designerId": "870f739b-28d3-46c2-b593-0ab1d30ec950"
+                }
+            ]
+        }
+    ]
+}

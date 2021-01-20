@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "tabsubsutszn",
+        "designer|userClassName": "sprav.TabSubsUtsznViewController"
+    },
+    "name": "sprav.TabKvartplataViewController1",
+    "designerId": "22a9ffc1-71e3-4e99-a963-6809dac6d37e"
+}

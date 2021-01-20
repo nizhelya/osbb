@@ -1,0 +1,61 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "stHeatHouseAll",
+        "designer|userClassName": "StHeatHouseAll",
+        "model": "MdPriborUcheta",
+        "storeId": "stHeatHouseAll"
+    },
+    "designerId": "86219469-2519-4a13-b8d3-32333d854d86",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "QueryTeplomer.getResults",
+                "extraParams": [
+                    "{what: 'AllPokHeatHouse'}"
+                ]
+            },
+            "name": "MyDirectProxy85",
+            "designerId": "8ab54592-6437-4072-b57a-1d295163d061",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader87",
+                    "designerId": "ea061c28-016b-4983-8fa6-8ab55842f6ce"
+                }
+            ]
+        },
+        {
+            "type": "Ext.util.Grouper",
+            "reference": {
+                "name": "groupers",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "raion"
+            },
+            "name": "MyGrouper",
+            "designerId": "3e1b1f25-0b2d-4699-a1aa-38e3562028bf"
+        }
+    ]
+}

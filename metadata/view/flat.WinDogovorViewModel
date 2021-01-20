@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "windogovor",
+        "designer|userClassName": "flat.WinDogovorViewModel"
+    },
+    "designerId": "4fce0101-840b-445b-90d1-0d22261acf17"
+}

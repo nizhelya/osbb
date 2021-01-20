@@ -1,0 +1,746 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "winaddenergomer",
+        "designer|userClassName": "sprav.WinAddEnergomer",
+        "height": 488,
+        "id": "winAddEnergomer",
+        "itemId": null,
+        "layout": "fit",
+        "modal": true,
+        "title": "Ввод нового счетчика электроэнергии",
+        "width": 568
+    },
+    "name": "sprav.WinAddVodomer1",
+    "configAlternates": {
+        "scrollable": "boolean"
+    },
+    "designerId": "54c63b4e-645b-4745-99fc-a4117e9f49bb",
+    "viewControllerInstanceId": "178d049e-9729-4f18-b828-d4b6568ca548",
+    "viewModelInstanceId": "1c44255e-3600-487f-9abd-e2f67d26b215",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": null,
+                "designer|snapToGrid": 5,
+                "height": 560,
+                "id": "fmAddEnergomer",
+                "itemId": null,
+                "layout": "absolute",
+                "title": "",
+                "width": 530
+            },
+            "name": "MyForm46",
+            "configAlternates": {
+                "scrollable": "boolean"
+            },
+            "designerId": "f704d1da-c0e2-4ea5-8bad-e2aea92eb5cd",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "layout|x": 0,
+                        "layout|y": 0,
+                        "name": "what"
+                    },
+                    "name": "MyHiddenField29",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "88837d1f-1673-4c78-903e-1e45d7da74f3"
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "layout|x": 0,
+                        "layout|y": 0,
+                        "name": "energomer_id"
+                    },
+                    "name": "MyHiddenField30",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "3203367f-c382-4b33-a728-52dfb7e7f8d6"
+                },
+                {
+                    "type": "Ext.form.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "boxLabel": "Подключить существующий счетчик",
+                        "fieldLabel": "",
+                        "hideEmptyLabel": false,
+                        "id": "chkExistentEnergomer",
+                        "inputValue": "1",
+                        "itemId": null,
+                        "labelWidth": 20,
+                        "layout|x": 255,
+                        "layout|y": 25,
+                        "name": "isjoint",
+                        "style": "background-color: #DCDCDC;",
+                        "submitValue": false,
+                        "uncheckedValue": "0",
+                        "validateOnChange": false
+                    },
+                    "name": "MyCheckbox89",
+                    "configAlternates": {
+                        "style": "string",
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "abefb823-7778-4382-81c5-bafc72fb766f",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onChkExistentEnergomerChange",
+                                "implHandler": [
+                                    "var cnt = Ext.getCmp('fcntNewEnergomer');",
+                                    "var cb = Ext.getCmp('cbExistentEnergomer');",
+                                    "var form = field.findParentByType('form');",
+                                    "",
+                                    "if (newValue) {",
+                                    "    cnt.hide();",
+                                    "    cb.show();",
+                                    "    cb.clearValue();",
+                                    "",
+                                    "form.down('#btAddEnergomer').setDisabled(true);",
+                                    "",
+                                    "}",
+                                    "else {",
+                                    "    cnt.show();",
+                                    "    cb.hide();",
+                                    "form.down('#btAddEnergomer').setDisabled(false);",
+                                    "",
+                                    "}",
+                                    ""
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onChkExistentEnergomerChange",
+                            "designerId": "de8690eb-db64-4358-b51f-a7e2b1e30a39"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "nomer",
+                        "fieldLabel": "Номер",
+                        "hidden": true,
+                        "id": "cbExistentEnergomer",
+                        "itemId": null,
+                        "labelWidth": 60,
+                        "layout|x": 260,
+                        "layout|y": 60,
+                        "name": "joint_id",
+                        "store": "StExistentEnergomer",
+                        "valueField": "energomer_id",
+                        "width": 260
+                    },
+                    "name": "MyComboBox64",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "19820aec-4598-4b9e-bc16-45a23c157cc8",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onCbExistentEnergomerSelect",
+                                "implHandler": [
+                                    "var form = combo.findParentByType('form');",
+                                    "form.down('#btAddEnergomer').setDisabled(false);",
+                                    ""
+                                ],
+                                "name": "select",
+                                "scope": "me"
+                            },
+                            "name": "onCbExistentEnergomerSelect",
+                            "designerId": "c6558b34-74e7-40bf-9ba5-328d8822595b"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "formBind": true,
+                        "height": null,
+                        "icon": "resources/css/images/ico/add.png",
+                        "id": "btAddEnergomer",
+                        "itemId": null,
+                        "layout|x": 335,
+                        "layout|y": 400,
+                        "text": "Добавить счетчик",
+                        "width": 185
+                    },
+                    "name": "MyButton160",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "831dd13c-02bf-47af-8550-0afcb5c09962"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": null,
+                        "icon": "resources/css/images/ico/delete.png",
+                        "layout|x": 35,
+                        "layout|y": 400,
+                        "text": "Отмена",
+                        "width": 80
+                    },
+                    "name": "MyButton161",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "f79205cf-f634-4b1a-9059-95155f4e514e",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "button.up('#winAddEnergomer').close();"
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "af453914-15da-4a5a-b84b-ed3ba61d1f5a"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|snapToGrid": 5,
+                        "height": 290,
+                        "id": "fcntNewEnergomer",
+                        "layout": "absolute",
+                        "layout|x": 35,
+                        "layout|y": 95,
+                        "margin": null,
+                        "style": "background-color: #DCDCDC;",
+                        "title": "",
+                        "width": 485
+                    },
+                    "name": "MyFieldSet181",
+                    "configAlternates": {
+                        "style": "string",
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "c0b68c24-2b05-40c6-bbaa-461b91ae6d54",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Number",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "blankText": "Поле обязательное для заполнения",
+                                "decimalPrecision": 0,
+                                "fieldLabel": "Первичное показание",
+                                "formBind": null,
+                                "hideTrigger": true,
+                                "labelAlign": "top",
+                                "labelWidth": 150,
+                                "layout|anchor": null,
+                                "layout|x": 315,
+                                "layout|y": 220,
+                                "minValue": 0,
+                                "name": "tek",
+                                "validateBlank": true,
+                                "value": [
+                                    "0"
+                                ],
+                                "width": 145
+                            },
+                            "name": "MyNumberField254",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "276a488d-6863-42e1-b633-32930c6feda8"
+                        },
+                        {
+                            "type": "Ext.form.field.Date",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "fieldLabel": "дата ввода ",
+                                "format": "d-m-Y",
+                                "labelAlign": "top",
+                                "labelWidth": 150,
+                                "layout|x": 315,
+                                "layout|y": 100,
+                                "name": "sdate",
+                                "submitFormat": "Ymd",
+                                "width": 145
+                            },
+                            "name": "MyDateField80",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "cc07755c-851b-4f5c-8259-dbf8d64cfd51"
+                        },
+                        {
+                            "type": "Ext.form.field.Date",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "дата поверки ",
+                                "format": "d-m-Y",
+                                "labelAlign": "top",
+                                "labelWidth": 150,
+                                "layout|x": 5,
+                                "layout|y": 100,
+                                "name": "pdate",
+                                "submitFormat": "Ymd",
+                                "width": 140
+                            },
+                            "name": "MyDateField81",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "36ddd63b-410a-4fe6-9e74-8957c3dcfa14"
+                        },
+                        {
+                            "type": "Ext.form.field.Date",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Следующая поверка ",
+                                "format": "d-m-Y",
+                                "labelAlign": "top",
+                                "labelWidth": 150,
+                                "layout|x": 5,
+                                "layout|y": 160,
+                                "name": "fpdate",
+                                "submitFormat": "Ymd",
+                                "width": 140
+                            },
+                            "name": "MyDateField82",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "b456c1ef-e7de-451b-bf0d-b7faeab9e462"
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "Общий",
+                                "fieldLabel": "",
+                                "id": "jointEnergomer",
+                                "inputValue": "1",
+                                "itemId": null,
+                                "layout|x": 360,
+                                "layout|y": 35,
+                                "name": "joint",
+                                "uncheckedValue": "0"
+                            },
+                            "name": "MyCheckbox93",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "58ebd69c-2070-49a7-850a-e22b78ffdafc"
+                        },
+                        {
+                            "type": "Ext.form.RadioGroup",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "columns": 1,
+                                "fieldLabel": "Место установки",
+                                "height": 160,
+                                "id": "rbgPlace1",
+                                "labelAlign": "top",
+                                "layout|x": 165,
+                                "layout|y": 110,
+                                "style": "background-color: #F1EEEE ;",
+                                "width": 130
+                            },
+                            "name": "MyRadioGroup11",
+                            "configAlternates": {
+                                "columns": "number",
+                                "style": "string",
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "f97a7b52-9174-4a0a-9777-f59b4eb929a5",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "Блок",
+                                        "checked": true,
+                                        "fieldLabel": null,
+                                        "inputValue": "блок",
+                                        "labelWidth": 80,
+                                        "name": "place"
+                                    },
+                                    "name": "MyRadio33",
+                                    "configAlternates": {
+                                        "scrollable": "boolean"
+                                    },
+                                    "designerId": "54f2b181-26c9-4b8e-9dbb-2349ee70fcb3"
+                                },
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "Коридор",
+                                        "fieldLabel": null,
+                                        "inputValue": "Коридор",
+                                        "name": "place"
+                                    },
+                                    "name": "MyRadio34",
+                                    "configAlternates": {
+                                        "scrollable": "boolean"
+                                    },
+                                    "designerId": "deea2e31-1aa4-4fe8-b37b-d827ae2bc645"
+                                },
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "Кухня",
+                                        "fieldLabel": null,
+                                        "inputValue": "Кухня",
+                                        "name": "place"
+                                    },
+                                    "name": "MyRadio35",
+                                    "configAlternates": {
+                                        "scrollable": "boolean"
+                                    },
+                                    "designerId": "17fc22cd-c4d8-43a1-9542-6b4d55ed998f"
+                                },
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "ПРУ",
+                                        "fieldLabel": null,
+                                        "inputValue": "ПРУ",
+                                        "name": "place"
+                                    },
+                                    "name": "MyRadio36",
+                                    "configAlternates": {
+                                        "scrollable": "boolean"
+                                    },
+                                    "designerId": "c2ce869e-1b39-440c-8ebc-abfa695a6828"
+                                },
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "Другое",
+                                        "fieldLabel": null,
+                                        "inputValue": "Другое",
+                                        "name": "place"
+                                    },
+                                    "name": "MyRadio39",
+                                    "configAlternates": {
+                                        "scrollable": "boolean"
+                                    },
+                                    "designerId": "b21dd2ab-d548-4c51-9418-73196585c5fb"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "blankText": "Поле обязательное для заполнения",
+                                "fieldLabel": "Номер",
+                                "formBind": false,
+                                "id": null,
+                                "itemId": null,
+                                "labelWidth": 60,
+                                "layout|anchor": null,
+                                "layout|x": 60,
+                                "layout|y": 15,
+                                "name": "nomer",
+                                "width": 250
+                            },
+                            "name": "MyTextField165",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "79f7e59f-abc9-4f2b-9d31-e657abedb4f8"
+                        },
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "displayField": "model",
+                                "fieldLabel": "Модель",
+                                "formBind": false,
+                                "id": "cbEnergoModel",
+                                "itemId": null,
+                                "labelWidth": 60,
+                                "layout|anchor": null,
+                                "layout|x": 60,
+                                "layout|y": 60,
+                                "name": "model_id",
+                                "queryMode": "local",
+                                "store": "StEmodel",
+                                "value": null,
+                                "valueField": "model_id",
+                                "width": 250
+                            },
+                            "name": "MyComboBox65",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "874184c7-1ced-4f5a-a019-7b116ecbbac0"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "№ пломбы",
+                                "labelAlign": "top",
+                                "layout|x": 5,
+                                "layout|y": 220,
+                                "name": "plomba",
+                                "width": 140
+                            },
+                            "name": "MyTextField166",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "afb1a4d9-c877-4d23-b287-06b1f5b643df"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "№ заводской пломбы",
+                                "labelAlign": "top",
+                                "layout|x": 315,
+                                "layout|y": 155,
+                                "name": "zplomba",
+                                "width": 145
+                            },
+                            "name": "MyTextField167",
+                            "configAlternates": {
+                                "scrollable": "boolean"
+                            },
+                            "designerId": "bcb438bd-860d-4822-9aaf-922cbc06d86b"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "текущий адрес_ид",
+                        "id": null,
+                        "labelWidth": 120,
+                        "layout|x": 35,
+                        "layout|y": 25,
+                        "name": "address_id",
+                        "style": "background-color: #DCDCDC;",
+                        "width": 185
+                    },
+                    "name": "MyTextField168",
+                    "configAlternates": {
+                        "style": "string",
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "e9b7421b-af0a-4cf0-ae3d-2eaca5333199"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "allowBlank": false,
+                        "fieldLabel": "новый  адрес_ид",
+                        "id": null,
+                        "labelWidth": 120,
+                        "layout|x": 35,
+                        "layout|y": 60,
+                        "name": "new_address_id",
+                        "style": "background-color: #DCDCDC;",
+                        "width": 185
+                    },
+                    "name": "MyTextField2",
+                    "configAlternates": {
+                        "style": "string",
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "854899f9-4ef2-4e2a-b42c-02fc9ff35d26",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onTextfieldChange",
+                                "implHandler": [
+                                    "var form = field.findParentByType('form');",
+                                    "    form.down('#btAddEnergomer').setDisabled(false);",
+                                    ""
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "name": "onTextfieldChange",
+                            "designerId": "f76a146f-8a49-4d15-924a-7dd5270c2410"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "name": "denergomer_id"
+                    },
+                    "name": "MyHiddenField31",
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "be2e9a44-5034-4939-8d76-87ef906df81f"
+                }
+            ]
+        }
+    ]
+}

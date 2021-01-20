@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "winaddenergomer",
+        "designer|userClassName": "sprav.WinAddEnergomerViewController"
+    },
+    "name": "sprav.WinAddVodomerViewController1",
+    "designerId": "178d049e-9729-4f18-b828-d4b6568ca548"
+}

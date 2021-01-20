@@ -1,0 +1,50 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": null,
+        "designer|userAlias": "stSobstvu",
+        "designer|userClassName": "StSobstvu",
+        "model": "MdSpravochnik",
+        "storeId": "stSobstvu"
+    },
+    "name": "StSobstv1",
+    "designerId": "45c0e72d-844e-43c2-acf6-13e8b8a7c4c4",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "QueryLoad.getResults",
+                "extraParams": [
+                    "{what:'Sobstvu'}"
+                ]
+            },
+            "name": "MyDirectProxy18",
+            "designerId": "49f8fb43-8e6a-487d-917c-527d7239deac",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader18",
+                    "designerId": "aeccde82-3576-4651-8d0e-d6fac3e6b7de"
+                }
+            ]
+        }
+    ]
+}

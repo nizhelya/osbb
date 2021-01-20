@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "tabmenergomer",
+        "designer|userClassName": "sprav.TabMEnergomerViewController"
+    },
+    "name": "sprav.TabMTeplomerViewController1",
+    "designerId": "6df1188b-8e1e-4bc7-a92b-ba74e7f4a07b"
+}

@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "tabenergy",
+        "designer|userClassName": "sprav.TabEnergyViewController"
+    },
+    "name": "sprav.TabTboViewController1",
+    "designerId": "601fd9d2-9e4d-4e8f-8006-b555e0f5e33e"
+}

@@ -1,0 +1,62 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": null,
+        "data": [
+            "[",
+            "{",
+            "\"vvod\": \"Ввод 1\"",
+            "},",
+            "{",
+            "\"vvod\": \"Ввод 2\"",
+            "},",
+            "{",
+            "\"vvod\": \"Ввод 3\"",
+            "},",
+            "{",
+            "\"vvod\": \"Ввод 4\"",
+            "},",
+            "{",
+            "\"vvod\": \"Ввод 5\"",
+            "},",
+            "{",
+            "\"vvod\": \"Ввод 6\"",
+            "}",
+            "]"
+        ],
+        "designer|userAlias": "stVvod",
+        "designer|userClassName": "StVvod",
+        "storeId": "stVvod"
+    },
+    "designerId": "c94e7167-e55f-4fa1-b57d-d2f9deeda2e9",
+    "cn": [
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "vvod"
+            },
+            "name": "MyString237",
+            "designerId": "a45ebae4-d4fa-4f39-93ed-a6ed7247575b"
+        },
+        {
+            "type": "Ext.data.proxy.Memory",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyMemoryProxy6",
+            "designerId": "5fb3fa44-f267-47c1-a1e5-1a6cddb8e828"
+        }
+    ]
+}

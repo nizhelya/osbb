@@ -1,0 +1,18 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "autoSync": null,
+        "designer|userAlias": "StEnergyTarif",
+        "designer|userClassName": "StEnergyTarif",
+        "model": "MdEnergyTarif",
+        "storeId": "StEnergyTarif"
+    },
+    "name": "StTboTarif1",
+    "designerId": "e9fcc2e1-8d18-405d-8a1c-3056159097b0"
+}

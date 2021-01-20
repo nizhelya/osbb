@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "winimport",
+        "designer|userClassName": "sprav.WinImportViewController"
+    },
+    "designerId": "23a5f4ad-d07c-49a1-ae6b-f3e01fca1360"
+}

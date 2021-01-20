@@ -1,0 +1,50 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": null,
+        "designer|userAlias": "stTekNachOrgVod",
+        "designer|userClassName": "StTekNachOrgVod",
+        "model": "MdTekNach",
+        "storeId": "stTekNachOrgVod"
+    },
+    "designerId": "131c9130-f81f-49d8-b205-561d8b933a0f",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "QueryVodomer.getResults",
+                "extraParams": [
+                    "{what:'TekNachOrgVodomera'} ",
+                    ""
+                ]
+            },
+            "name": "MyDirectProxy84",
+            "designerId": "a6a02a93-d4b8-45b7-b5e0-46b194d4cc1a",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader86",
+                    "designerId": "b6404dc1-aa27-4bd6-9517-113d97c5a847"
+                }
+            ]
+        }
+    ]
+}

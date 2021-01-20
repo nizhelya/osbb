@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "tabrfond",
+        "designer|userClassName": "sprav.TabRfondViewModel"
+    },
+    "name": "sprav.TabVaxtaViewModel1",
+    "designerId": "2f08a59a-35f1-4629-b85a-4ad0785d4dd8"
+}

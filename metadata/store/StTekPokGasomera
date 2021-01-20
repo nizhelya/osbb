@@ -1,0 +1,46 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": null,
+        "designer|userClassName": "StTekPokGasomera",
+        "model": "MdPriborUcheta",
+        "storeId": "StTekPokGasomera"
+    },
+    "name": "StTekPokEnergomerov1",
+    "designerId": "58abefdf-a008-4ad1-9384-9cd2dba7a370",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "QueryGasomer.getResults"
+            },
+            "name": "MyDirectProxy74",
+            "designerId": "80bd3773-4f64-4733-b334-7486eb38947c",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader76",
+                    "designerId": "f3dd31a9-1d72-479a-a686-0bb025208f90"
+                }
+            ]
+        }
+    ]
+}

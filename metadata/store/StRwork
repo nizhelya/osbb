@@ -1,0 +1,49 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": null,
+        "designer|userAlias": "stRwork",
+        "designer|userClassName": "StRwork",
+        "model": "MdSpravochnik",
+        "storeId": "stRwork"
+    },
+    "designerId": "6e7f021c-785b-411f-a8d9-d6bbbab324c2",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "QueryLoad.getResults",
+                "extraParams": [
+                    "{what:'Rwork'}"
+                ]
+            },
+            "name": "MyDirectProxy17",
+            "designerId": "06faf64a-e71b-4acd-8886-858977c6cb8e",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader17",
+                    "designerId": "55176401-eac5-4bd5-a746-a600edcbc433"
+                }
+            ]
+        }
+    ]
+}

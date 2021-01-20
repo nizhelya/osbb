@@ -1,0 +1,69 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "data": [
+            "[",
+            "{",
+            "\"usluga\": \"тариф\",",
+            "\"tarif\": \"vaxta\"",
+            "},",
+            "{",
+            "\"usluga\": \"перерасчет\",",
+            "\"tarif\": \"ch_vaxta\"",
+            "},",
+            "{",
+            "\"usluga\": \"площадь\",",
+            "\"tarif\": \"square\"",
+            "}",
+            "]"
+        ],
+        "designer|userClassName": "StVaxtaTarif",
+        "storeId": "StVaxtaTarif"
+    },
+    "name": "StKvTarif1",
+    "designerId": "9b6c2f44-0290-421d-98dd-1aeb2c355195",
+    "cn": [
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "usluga"
+            },
+            "name": "MyString209",
+            "designerId": "8d0f3a4a-798f-42dd-9714-9c47578f5971"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tarif"
+            },
+            "name": "MyString210",
+            "designerId": "65e07d25-0ab9-49b3-8109-a61992f080b8"
+        },
+        {
+            "type": "Ext.data.proxy.Memory",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyMemoryProxy4",
+            "designerId": "74b5c0a5-7a41-4a16-a3ec-bb69473c672c"
+        }
+    ]
+}

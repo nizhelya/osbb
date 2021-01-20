@@ -1,0 +1,76 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": null,
+        "data": [
+            "[",
+            "{",
+            "\"edizm\": \"ГКал\",",
+            "\"koef\": 1",
+            "},",
+            "{",
+            "\"edizm\": \"MWh\",",
+            "\"koef\": 0.86",
+            "},",
+            "{",
+            "\"edizm\": \"KWh\",",
+            "\"koef\": 0.00086",
+            "},",
+            "{",
+            "\"edizm\": \"ГДж\",",
+            "\"koef\": 0.239",
+            "}",
+            "]"
+        ],
+        "designer|userAlias": "stEdIzm",
+        "designer|userClassName": "StEdIzm",
+        "storeId": "stEdIzm"
+    },
+    "designerId": "59fae3b0-a5e3-451d-b5b4-fda6ca0f4d96",
+    "cn": [
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "edizm"
+            },
+            "name": "MyString213",
+            "designerId": "734ea90d-9798-4f7a-aaf4-8d4bd9c34633"
+        },
+        {
+            "type": "Ext.data.field.Number",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "koef"
+            },
+            "name": "MyNumber253",
+            "designerId": "022b3987-579a-41e9-9f21-2f5325d02305"
+        },
+        {
+            "type": "Ext.data.proxy.Memory",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "data": null
+            },
+            "name": "MyMemoryProxy1",
+            "designerId": "20ef4589-5ec4-4504-9cf9-82ad9b1d2705"
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "StHGasomer",
+        "model": "MdPriborUcheta",
+        "storeId": "StHGasomer"
+    },
+    "name": "StHEnergomer1",
+    "designerId": "5c50ba98-554b-480d-b7e2-4adb50576a24",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "QueryGasomer.getResults"
+            },
+            "name": "MyDirectProxy8",
+            "designerId": "de5b301a-4047-4907-bb75-342ca9c3e766",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader8",
+                    "designerId": "04c474fa-5f35-47dd-a58a-c736cfec43bb"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "stDVodomer",
+        "designer|userClassName": "StDVodomer",
+        "model": "MdPriborUcheta",
+        "storeId": "stDVodomer"
+    },
+    "designerId": "6690ea72-b2c4-44b3-ab26-5734c5a4583d",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "QueryVodomer.getResults",
+                "extraParams": [
+                    "{'what':'StDvodomer'}",
+                    ""
+                ]
+            },
+            "name": "MyDirectProxy38",
+            "designerId": "24fa330a-32a5-468b-979e-cb2fa1b59f33",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader38",
+                    "designerId": "bcca58a0-6c7a-43b5-b8d4-d65be307263d"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "stLastPay",
+        "designer|userClassName": "StLastPay",
+        "model": "MdLastPay",
+        "storeId": "stLastPay"
+    },
+    "designerId": "3c3eb72a-04e6-4446-a472-667f38c12718",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "QueryKassa.getResults"
+            },
+            "name": "MyDirectProxy62",
+            "designerId": "fd7be70b-ae4a-4b50-a95e-d7e6c8ec20f4",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader64",
+                    "designerId": "1ad736d1-4914-4e38-a8ac-fd7289f33e7d"
+                }
+            ]
+        }
+    ]
+}

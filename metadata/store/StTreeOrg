@@ -1,0 +1,44 @@
+{
+    "type": "Ext.data.TreeStore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": null,
+        "designer|userAlias": "stTreeOrg",
+        "designer|userClassName": "StTreeOrg",
+        "model": "MdTreeOrg",
+        "storeId": "stTreeOrg"
+    },
+    "designerId": "53468bac-56bd-4da0-b57d-e8330a2da60a",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": null,
+                "url": "resources/php/classes/QueryTreeOrg.php"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "7d0cde89-bf2e-4bc8-a2cf-513f5f5a0675",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyJsonReader42",
+                    "designerId": "47dcee44-6203-4f5d-8c7f-7eebb05a3474"
+                }
+            ]
+        }
+    ]
+}

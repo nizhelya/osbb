@@ -1,0 +1,81 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MdTboTarif"
+    },
+    "name": "MyModel",
+    "designerId": "547b640e-d9c1-491b-a07e-954ac7c9cd84",
+    "cn": [
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "usluga"
+            },
+            "name": "MyString221",
+            "designerId": "c54c7246-bbf7-4f6c-9e68-85551a0f3c71"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tarif"
+            },
+            "name": "MyString222",
+            "designerId": "d3b2041e-4930-4ecc-a581-1d827e7746d7"
+        },
+        {
+            "type": "Ext.data.proxy.Memory",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "data": [
+                    "[",
+                    "{",
+                    "'usluga': 'Метод(0-чел,1-кв)',",
+                    "'tarif': 'metod_tbo'",
+                    "},",
+                    "{",
+                    "'usluga': 'Тариф',",
+                    "'tarif': 'tbo'",
+                    "},",
+                    "{",
+                    "'usluga': 'тариф за куб',",
+                    "'tarif': 'tbo_kub'",
+                    "},",
+                    "{",
+                    "'usluga': 'количество',",
+                    "'tarif': 'tbo_qty'",
+                    "},",
+                    "{",
+                    "'usluga': 'перерасчет ТБО',",
+                    "'tarif': 'ch_tbo'",
+                    "},",
+                    "{",
+                    "'usluga': 'Лимит на 1 лготн.',",
+                    "'tarif': 'tbo_lg'",
+                    "}",
+                    "]"
+                ]
+            },
+            "name": "MyMemoryProxy",
+            "designerId": "a2c54889-e043-47f2-865f-88c8d5de8f16"
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": null,
+        "designer|userAlias": "stFilialOpl",
+        "designer|userClassName": "StFilialOpl",
+        "model": "MdFilial",
+        "storeId": "stFilialOpl"
+    },
+    "name": "StFilial1",
+    "designerId": "af654865-c661-450b-b489-a284aabffd6e",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "QueryOrg.getResults",
+                "extraParams": [
+                    "{",
+                    "what:'FmFilial'",
+                    "}"
+                ]
+            },
+            "name": "MyDirectProxy61",
+            "designerId": "8441a434-9b10-4020-a8af-2fa7494f5057",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader63",
+                    "designerId": "ddd70108-6ae3-4d31-81e1-e8997bdffb00"
+                }
+            ]
+        }
+    ]
+}

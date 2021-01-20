@@ -1,0 +1,93 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "mdFilPhones",
+        "designer|userClassName": "MdFilPhones"
+    },
+    "designerId": "de99978f-f4f1-4be7-88eb-f75c356f0ca1",
+    "cn": [
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "phone_id"
+            },
+            "name": "MyString305",
+            "designerId": "d951e5e9-fb8a-4b93-81b3-fc825ada3e8a"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "org_id"
+            },
+            "name": "MyString306",
+            "designerId": "2ddce8af-ae81-49e3-9820-eaf11ccb0189"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "filial_id"
+            },
+            "name": "MyString307",
+            "designerId": "b6e3fe5b-176b-4df3-b266-034f91de9178"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "phone"
+            },
+            "name": "MyString308",
+            "designerId": "e428e1b3-8127-4c8d-b12d-576705c6b67a"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "pname"
+            },
+            "name": "MyString309",
+            "designerId": "8d70a231-f7e7-432c-b88b-1b882c24759b"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name"
+            },
+            "name": "MyString310",
+            "designerId": "c36fe4ee-4b31-481b-9c01-61d8d2ee4f08"
+        }
+    ]
+}

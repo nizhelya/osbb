@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "winaddenergomer",
+        "designer|userClassName": "sprav.WinAddEnergoViewModel"
+    },
+    "name": "sprav.WinAddVodomerViewModel1",
+    "designerId": "1c44255e-3600-487f-9abd-e2f67d26b215"
+}

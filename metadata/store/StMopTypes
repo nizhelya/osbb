@@ -1,0 +1,88 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": null,
+        "designer|userAlias": "stMopTypes",
+        "designer|userClassName": "StMopTypes",
+        "model": null,
+        "storeId": "stMopTypes"
+    },
+    "designerId": "05b177fb-87ad-435c-b1b6-c9d6ce2e0f3a",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "QueryLoad.getResults",
+                "extraParams": [
+                    "{what:'Mopt'}"
+                ]
+            },
+            "name": "MyDirectProxy36",
+            "designerId": "3823c898-e54c-49d5-92c6-486bce5a726c",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader36",
+                    "designerId": "025b8731-63a7-4dc4-b7cf-eb133d43a3da"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "mopid"
+            },
+            "name": "MyInteger133",
+            "designerId": "cdf57c17-45d1-49a9-b790-b2f06d10a05e"
+        },
+        {
+            "type": "Ext.data.field.Number",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "temp"
+            },
+            "name": "MyNumber192",
+            "designerId": "6d0e0441-07cf-482d-9129-81c67231a2a0"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name"
+            },
+            "name": "MyString158",
+            "designerId": "8c751337-f215-4c2b-99d2-f63cb88ea50b"
+        }
+    ]
+}

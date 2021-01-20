@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "tabwaterhouse",
+        "designer|userClassName": "sprav.TabWaterHouseViewController"
+    },
+    "designerId": "85143cae-2bf9-4c78-bd56-af04e19e71d2"
+}

@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "tabnewaddress",
+        "designer|userClassName": "sprav.TabNewAddressViewController"
+    },
+    "designerId": "3d46f56e-261c-4a6c-a92b-9a3fb481280b"
+}

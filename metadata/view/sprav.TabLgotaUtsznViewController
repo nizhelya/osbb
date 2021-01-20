@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "tablgotautszn",
+        "designer|userClassName": "sprav.TabLgotaUtsznViewController"
+    },
+    "name": "sprav.TabSubsUtsznViewController1",
+    "designerId": "114871aa-ae1c-4637-b34a-f66f9bef39d4"
+}

@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "tabwaterhouse",
+        "designer|userClassName": "sprav.TabWaterHouseViewModel"
+    },
+    "designerId": "152ee79d-1093-4a7c-83ee-4888d1a53571"
+}

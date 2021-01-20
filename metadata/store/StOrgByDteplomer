@@ -1,0 +1,49 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "stOrgByDteplomer",
+        "designer|userClassName": "StOrgByDteplomer",
+        "model": "MdFilial",
+        "storeId": "stOrgByDteplomer"
+    },
+    "designerId": "0674f824-b5a5-481c-95b8-6c89aa05a07f",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "QueryTeplomer.getResults",
+                "extraParams": [
+                    "{what:'OrgByDteplomer'",
+                    "}"
+                ]
+            },
+            "name": "MyDirectProxy32",
+            "designerId": "f0e700dd-ce77-44cc-af21-9ec49e08ad79",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader32",
+                    "designerId": "f077783e-2271-4c13-8225-bafdc7bccbea"
+                }
+            ]
+        }
+    ]
+}

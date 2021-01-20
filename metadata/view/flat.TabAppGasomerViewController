@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "flattabappgasomer",
+        "designer|userClassName": "flat.TabAppGasomerViewController"
+    },
+    "name": "flat.TabAppEnergomerViewController1",
+    "designerId": "ae03e587-e000-4fa6-be59-a568153059a5"
+}

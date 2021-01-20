@@ -1,0 +1,83 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MdModel",
+        "idProperty": "model_id"
+    },
+    "designerId": "2d932b0f-86ea-4437-b6f3-0c2f288bc698",
+    "cn": [
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "model_id"
+            },
+            "name": "MyInteger161",
+            "designerId": "5e64ba74-d0d0-4209-bf28-e355b4799591"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "model",
+                "sortType": [
+                    "asText"
+                ]
+            },
+            "name": "MyString211",
+            "designerId": "aebf3f1c-60b6-47a6-b149-8e47fa24c4b8"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "edizm"
+            },
+            "name": "MyString212",
+            "designerId": "6711fd82-dbc9-426c-924d-5d7ea6597b6d"
+        },
+        {
+            "type": "Ext.data.field.Number",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "koef"
+            },
+            "name": "MyNumber252",
+            "designerId": "8639eae6-2d95-437e-973b-04d1fd668613"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "what"
+            },
+            "name": "MyString196",
+            "designerId": "f3fc7fc9-4075-41aa-bd08-4069e1e94fd6"
+        }
+    ]
+}

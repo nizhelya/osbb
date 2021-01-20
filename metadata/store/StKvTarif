@@ -1,0 +1,90 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "data": [
+            "[",
+            "{",
+            "usluga: \"Кв\",",
+            "tarif: \"kv\"",
+            "},",
+            "{",
+            "usluga: \"Кв(1эт)\",",
+            "tarif: \"kvf1\"",
+            "},",
+            "{",
+            "usluga: \"пер Кв\",",
+            "tarif: \"ch_kv\"",
+            "},",
+            "{",
+            "usluga: \"пер Кв(1эт)\",",
+            "tarif: \"ch_kvf1\"",
+            "},",
+            "{",
+            "usluga: \"Доп\",",
+            "tarif: \"dop\"",
+            "},",
+            "",
+            "{",
+            "usluga: \"ремонт\",",
+            "tarif: \"remont\"",
+            "},",
+            "{",
+            "usluga: \"тар льг(1эт)\",",
+            "tarif: \"lgf1\"",
+            "},",
+            "{",
+            "usluga: \"тар льг\",",
+            "tarif: \"lg\"",
+            "}",
+            "]"
+        ],
+        "designer|userAlias": "stKvTarif",
+        "designer|userClassName": "StKvTarif",
+        "storeId": "stKvTarif"
+    },
+    "designerId": "13bbf0b0-6e72-4cb5-8632-8b0608ff5367",
+    "cn": [
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "usluga"
+            },
+            "name": "MyString209",
+            "designerId": "f3b2c7d0-d37b-4ceb-ad83-7f2940ab2cd6"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tarif"
+            },
+            "name": "MyString210",
+            "designerId": "d2e1fa62-52d0-4bea-8217-192b0243405c"
+        },
+        {
+            "type": "Ext.data.proxy.Memory",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyMemoryProxy4",
+            "designerId": "00ac28aa-fad6-42fe-bd95-8c6a5cc4c9b8"
+        }
+    ]
+}

@@ -1,0 +1,90 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "autoSync": true,
+        "designer|userAlias": "stFilServ",
+        "designer|userClassName": "StFilServ",
+        "groupField": "serv_type_name",
+        "model": "MdFilServ",
+        "storeId": "stFilServ"
+    },
+    "designerId": "d1bf5253-d203-423f-93d7-eb10337b42d1",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{",
+                    "create: 'QueryOrg.createRecord',",
+                    "read: 'QueryOrg.getResults',",
+                    "update: 'QueryOrg.updateRecords',",
+                    "destroy: 'QueryOrg.destroyRecord'",
+                    "}"
+                ],
+                "directFn": null,
+                "extraParams": [
+                    " {'what':'FilServ'}"
+                ]
+            },
+            "name": "MyDirectProxy70",
+            "designerId": "863971f3-4a5e-4add-aecf-6360046c6b8d",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader72",
+                    "designerId": "b1ff9bf8-82fe-4e0b-8c67-e148e9ce2f50"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "nameProperty": "login, password"
+                    },
+                    "name": "MyJsonWriter12",
+                    "designerId": "585469cd-5d51-4127-ad95-4fd131335522"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onDirectstoreUpdate",
+                "implHandler": [
+                    "if (operation==='commit') {this.load();}"
+                ],
+                "name": "update",
+                "scope": "me"
+            },
+            "name": "onDirectstoreUpdate",
+            "designerId": "c807822a-79c2-49ce-b0ae-c34e4d0e420e"
+        }
+    ]
+}

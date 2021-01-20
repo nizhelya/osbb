@@ -1,0 +1,52 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": null,
+        "autoSync": null,
+        "designer|userAlias": "StOrgFil",
+        "designer|userClassName": "StOrgFil",
+        "groupField": "sobstv_type_name",
+        "model": "MdOrgDogFil",
+        "storeId": "StOrgFil"
+    },
+    "designerId": "e3253bd1-8e88-459b-aa14-6462419eead6",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "QueryOrg.getResults",
+                "extraParams": [
+                    " {'what':'StOrgFil',",
+                    " 'what_id':''}"
+                ]
+            },
+            "name": "MyDirectProxy65",
+            "designerId": "9f9e6b92-ea45-419b-9294-180a64943468",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader67",
+                    "designerId": "a6288b45-ace2-41b4-8d52-e477cff139a6"
+                }
+            ]
+        }
+    ]
+}

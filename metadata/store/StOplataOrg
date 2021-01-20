@@ -1,0 +1,90 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "stOplataOrg",
+        "designer|userClassName": "StOplataOrg",
+        "groupDir": "DESC",
+        "groupField": "data",
+        "model": "MdOplata",
+        "storeId": "stOplataOrg"
+    },
+    "designerId": "e674f545-c354-409e-bee7-db4ab00ebd96",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{",
+                    "read: 'QuerySprav.getResults',",
+                    "update: 'QuerySprav.updateRecords',",
+                    "destroy: 'QuerySprav.destroyRecord'",
+                    "}"
+                ],
+                "directFn": null,
+                "extraParams": [
+                    " {'what':'getOplataOrg'}"
+                ],
+                "groupParam": null
+            },
+            "name": "MyDirectProxy39",
+            "designerId": "ec8d15ad-5523-46ce-a7fe-c774b5ed3765",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader39",
+                    "designerId": "94a4c1a7-a1fc-4578-becd-dc2f0019bdd9"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "writeAllFields": true
+                    },
+                    "name": "MyJsonWriter3",
+                    "designerId": "2d30a7da-a35e-41b5-8848-39dd46cd94b4"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onDirectstoreRemove",
+                "implHandler": [
+                    "records[0].data.what = \"getOplataOrg\";",
+                    ""
+                ],
+                "name": "remove",
+                "scope": "me"
+            },
+            "name": "onDirectstoreRemove",
+            "designerId": "b54b3d5a-beb8-4391-bf06-cd9dca24c761"
+        }
+    ]
+}

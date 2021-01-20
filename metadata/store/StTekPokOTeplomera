@@ -1,0 +1,46 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "designer|userAlias": "stTekPokOTeplomera",
+        "designer|userClassName": "StTekPokOTeplomera",
+        "model": "MdPriborUcheta",
+        "storeId": "stTekPokOTeplomera"
+    },
+    "designerId": "ef5d3aaf-eeb4-4faf-922e-c7c1e26adddc",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "directFn": "QueryTeplomer.getResults"
+            },
+            "name": "MyDirectProxy86",
+            "designerId": "d266e93c-3c01-41c8-81d0-2ec2cfe46fe4",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader88",
+                    "designerId": "c452c634-6c72-4195-bdd2-d3cff83594dc"
+                }
+            ]
+        }
+    ]
+}

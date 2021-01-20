@@ -1,0 +1,17 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "autoSync": null,
+        "designer|userAlias": "stTboTarif",
+        "designer|userClassName": "StTboTarif",
+        "model": "MdTboTarif",
+        "storeId": "stTboTarif"
+    },
+    "designerId": "8877abb7-0928-4c66-9fa6-5e1d038e94c2"
+}

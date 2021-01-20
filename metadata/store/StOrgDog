@@ -1,0 +1,107 @@
+{
+    "type": "directstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": null,
+        "autoSync": null,
+        "designer|userAlias": "stOrgDog",
+        "designer|userClassName": "StOrgDog",
+        "model": "MdOrgDog",
+        "storeId": "stOrgDog"
+    },
+    "designerId": "17ee2898-8bc7-4957-a27f-1c21970a2335",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Direct",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "api": [
+                    "{",
+                    "create: 'QueryOrg.createRecord',",
+                    "read: 'QueryOrg.getResults',",
+                    "update: 'QueryOrg.updateRecords',",
+                    "destroy: 'QueryOrg.destroyRecord'",
+                    "}"
+                ],
+                "directFn": null,
+                "extraParams": [
+                    "{what: 'OrgDog'}"
+                ]
+            },
+            "name": "MyDirectProxy64",
+            "designerId": "379765bb-643d-4af5-8ff3-201513f51973",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader66",
+                    "designerId": "81bd958f-1a12-4176-aad7-1d0f4d964aa6"
+                },
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "nameProperty": "login, password"
+                    },
+                    "name": "MyJsonWriter11",
+                    "designerId": "abbd5f1a-b794-4094-81d5-34856e1218b2"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onDirectstoreBeforeLoad",
+                "implHandler": [
+                    "var stUser = Ext.data.StoreManager.get(\"StUser\");",
+                    "var values =stUser.getAt(0);",
+                    "var login = values.get('login');",
+                    "var password = values.get('password');",
+                    "var StOrgDogFil = Ext.data.StoreManager.get(\"StOrgDogFil\");",
+                    "var StOrgFil = Ext.data.StoreManager.get(\"StOrgFil\");",
+                    "var grid = Ext.getCmp('grOrgDogFil');",
+                    "",
+                    "store.proxy.setExtraParam('login', login);",
+                    "store.proxy.setExtraParam('password', password);",
+                    "",
+                    "grid.view.getSelectionModel().clearSelections();",
+                    "StOrgDogFil.removeAll();",
+                    "StOrgDogFil.proxy.setExtraParam('login', login);",
+                    "StOrgDogFil.proxy.setExtraParam('password', password);",
+                    "",
+                    "StOrgFil.removeAll();",
+                    "StOrgFil.proxy.setExtraParam('login', login);",
+                    "StOrgFil.proxy.setExtraParam('password', password);"
+                ],
+                "name": "beforeload",
+                "scope": "me"
+            },
+            "name": "onDirectstoreBeforeLoad",
+            "designerId": "a356f1e0-3f0c-45db-8cb4-196e425687a9"
+        }
+    ]
+}

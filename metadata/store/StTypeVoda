@@ -1,0 +1,64 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "data": [
+            "",
+            "[{",
+            "\"voda\": \"day_xv\",\"name\":\"Хвода\"",
+            "},",
+            "{",
+            "\"voda\": \"day_gv\",\"name\":\"Гвода\"",
+            "}]",
+            ""
+        ],
+        "designer|userAlias": "stTypeVoda",
+        "designer|userClassName": "StTypeVoda",
+        "storeId": "stTypeVoda"
+    },
+    "name": "StVvod1",
+    "designerId": "3bfabc59-ae95-4631-8474-62c176c57665",
+    "cn": [
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "voda"
+            },
+            "name": "MyString235",
+            "designerId": "10ea1cb9-0b5c-46f9-bdca-ce3e5371b54d"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name"
+            },
+            "name": "MyString236",
+            "designerId": "c703f27d-9e51-4e5e-8de2-ab706af10e52"
+        },
+        {
+            "type": "Ext.data.proxy.Memory",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyMemoryProxy6",
+            "designerId": "3019f86a-501c-43a9-8f68-8d27dd899f02"
+        }
+    ]
+}

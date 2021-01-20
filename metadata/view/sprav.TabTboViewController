@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "tabtbo",
+        "designer|userClassName": "sprav.TabTboViewController"
+    },
+    "designerId": "6ea6e7ee-de0a-4e1f-a7d2-ac29b25931f3"
+}

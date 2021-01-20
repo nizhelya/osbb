@@ -1,0 +1,17 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "autoSync": null,
+        "designer|userClassName": "StOtoplenieTarif",
+        "model": "MdOtoplenieTarif",
+        "storeId": "StOtoplenieTarif"
+    },
+    "name": "StEnergyTarif1",
+    "designerId": "7aca5bdb-7055-4a0e-825a-44c119ac46fb"
+}
