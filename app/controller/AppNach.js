@@ -1679,7 +1679,7 @@ Ext.define('Osbb.controller.AppNach', {
         var oplata = 0;
         var kvartplata = form.getForm().findField('kvartplata').getValue();
         var otoplenie = form.getForm().findField('otoplenie').getValue();
-        var podogrev = form.getForm().findField('podogrev').getValue();
+        var ptn = form.getForm().findField('ptn').getValue();
         var voda = form.getForm().findField('voda').getValue();
         var stoki = form.getForm().findField('stoki').getValue();
         var tbo = form.getForm().findField('tbo').getValue();
@@ -1688,7 +1688,7 @@ Ext.define('Osbb.controller.AppNach', {
         var vaxta = form.getForm().findField('vaxta').getValue();
 
         var summa = parseFloat(form.getForm().findField('summa').getValue()).toFixed(2);
-        oplata =parseFloat(kvartplata + otoplenie + podogrev + voda + stoki + tbo + energy + rfond+ vaxta).toFixed(2);
+        oplata =parseFloat(kvartplata + otoplenie + ptn + voda + stoki + tbo + energy + rfond+ vaxta).toFixed(2);
         //console.log(summa);
         //console.log(oplata);
 

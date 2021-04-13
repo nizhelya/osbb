@@ -322,7 +322,10 @@ foreach ( $array as $key => $value )  {
 			      $this->sql='CALL OSBB.courseMapEn("'.$this->house_id.'", "'.$this->date_from.'",@content,@success,@msg)';
 			//  print($this->sql);
 			break;
-			
+			case "courseMapVoda":			
+			      $this->sql='CALL OSBB.courseMapVoda("'.$this->house_id.'", "'.$this->date_from.'",@content,@success,@msg)';
+			//  print($this->sql);
+			break;
 			case "reportLgotnikLgota":		
 			      $this->sql='CALL '.$this->base.'.reportLgotnikLgota("'.$this->lgota_id.'", @head,@content,@foot,@success,@msg)';
 			break;
@@ -336,8 +339,13 @@ foreach ( $array as $key => $value )  {
 			      $this->sql='CALL '.$this->base.'.reportLgotnikHouse("'.$this->house_id.'", @head,@content,@foot,@success,@msg)';
 			break;
 			case "Dolgi":
+			switch ($this->rbDolg) {
+			case "1": 
 			$this->sql='CALL '.$this->base.'.DolgSumma("'.$this->house_id.'","'.$this->start.'","'.$this->finish.'","'.$this->date_from.'","'.$this->date_to.'",@content,@success,@msg)';
-						//  print($this->sql);
+			break;
+			case "0": 
+			$this->sql='CALL '.$this->base.'.DolgMonth("'.$this->house_id.'","'.$this->start.'","'.$this->date_from.'","'.$this->date_to.'",@content,@success,@msg)';					break;
+			}	
 
 			break;
 			case "HistoryFlatPayment":			

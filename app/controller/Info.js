@@ -179,6 +179,8 @@ Ext.define('Osbb.controller.Info', {
             case 'NachislenoAllPtn':
             case 'ListOnPay':
             case 'courseMapEn':
+            case 'courseMapVoda':
+
 
             case 'NachislenoAllTbo':
             case 'NachislenoAllEnergy':
@@ -401,6 +403,7 @@ Ext.define('Osbb.controller.Info', {
             case 'NachislenoAllPtn':
             case 'InfoOsmd':
             case 'courseMapEn':
+            case 'courseMapVoda':
 
             case 'InfoHouse':
             case 'KassaAddressOsmd':

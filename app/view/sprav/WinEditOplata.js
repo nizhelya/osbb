@@ -264,9 +264,9 @@ Ext.define('Osbb.view.sprav.WinEditOplata', {
                                 {
                                     xtype: 'numberfield',
                                     anchor: '100%',
-                                    fieldLabel: 'Подогрев',
+                                    fieldLabel: 'П.Т.Н.',
                                     labelWidth: 80,
-                                    name: 'podogrev',
+                                    name: 'ptn',
                                     value: 0,
                                     fieldStyle: 'background-color:#F0F8FF;font-size:11pt;text-align:right;',
                                     inputType: 'number',
@@ -286,7 +286,7 @@ Ext.define('Osbb.view.sprav.WinEditOplata', {
                                 {
                                     xtype: 'numberfield',
                                     anchor: '100%',
-                                    fieldLabel: 'Стоки',
+                                    fieldLabel: 'Гвода',
                                     labelWidth: 80,
                                     name: 'stoki',
                                     value: 0,
@@ -389,7 +389,7 @@ Ext.define('Osbb.view.sprav.WinEditOplata', {
                                 var oplata = 0;
                                 var kvartplata = form.getForm().findField('kvartplata').getValue();
                                 var otoplenie = form.getForm().findField('otoplenie').getValue();
-                                var podogrev = form.getForm().findField('podogrev').getValue();
+                                var ptn = form.getForm().findField('ptn').getValue();
                                 var voda = form.getForm().findField('voda').getValue();
                                 var stoki = form.getForm().findField('stoki').getValue();
                                 var tbo = form.getForm().findField('tbo').getValue();
@@ -397,7 +397,7 @@ Ext.define('Osbb.view.sprav.WinEditOplata', {
                                 var rfond = form.getForm().findField('rfond').getValue();
                                 var vaxta = form.getForm().findField('vaxta').getValue();
 
-                                oplata = kvartplata + otoplenie + podogrev + voda + stoki + tbo + energy + rfond + vaxta;
+                                oplata = kvartplata + otoplenie + ptn + voda + stoki + tbo + energy + rfond + vaxta;
 
                                 form.getForm().findField('summa').setValue(oplata);
 

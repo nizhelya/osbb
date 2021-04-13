@@ -288,6 +288,11 @@ Ext.define('Osbb.store.StTreeSprav', {
                                 id: 'NachislenoAllVoda',
                                 leaf: true,
                                 text: 'Начислено по дому'
+                            },
+                            {
+                                id: 'courseMapVoda',
+                                leaf: true,
+                                text: 'Маршрутная карта'
                             }
                         ]
                     },

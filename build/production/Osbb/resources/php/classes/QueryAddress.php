@@ -196,8 +196,7 @@ public function connect($login,$password)
 
 		    break;
 		    case "TabHouseResidents":
-			$_sql= 'SELECT t1.* , cast(t2.`appartment` as unsigned) as  app FROM OSBB.APPARTMENT as t1 LEFT JOIN YIS.ADDRESS as t2 USING(`address_id`)  WHERE t1.`house_id`='.$_id.' order by app' ; 
-//print($_sql);  
+			$_sql= 'SELECT t1.* , cast(t2.`appartment` as unsigned) as  app FROM OSBB.APPARTMENT as t1 LEFT JOIN YIS.ADDRESS as t2 USING(`address_id`)  WHERE t1.`house_id`='.$_id.' order by app' ; //print($_sql);  
 		 break;    
 		
 		       case "YearNachisleno":
@@ -331,7 +330,7 @@ public function connect($login,$password)
 		.$this->vaxta.'","'
 		.$this->tarif_kv.'","'
 		.$this->tarif_ot.'","'
-		.$this->tarif_gv.'","'
+		.$this->parking.'","'
 		.$this->tarif_xv.'","'		
 		.$this->tarif_st.'","'
 		.$this->tarif_tbo.'","'
@@ -394,7 +393,7 @@ public function connect($login,$password)
 		.$this->vaxta.'","'
 		.$this->tarif_kv.'","'
 		.$this->tarif_ot.'","'
-		.$this->tarif_gv.'","'
+		.$this->parking.'","'
 		.$this->tarif_xv.'","'		
 		.$this->tarif_st.'","'
 		.$this->tarif_tbo.'","'
@@ -1269,7 +1268,7 @@ public function connect($login,$password)
 
 			break;
 			case "editOplataApp":
-			      $this->sql='CALL OSBB.editOplataApp('.$this->rec_id.','.$this->address_id.','.$this->kvartplata.','.$this->otoplenie.',"'.$this->podogrev.'",'.$this->voda.','
+			      $this->sql='CALL OSBB.editOplataApp('.$this->rec_id.','.$this->address_id.','.$this->kvartplata.','.$this->otoplenie.',"'.$this->ptn.'",'.$this->voda.','
 			      .$this->stoki.','.$this->tbo.','.$this->energy.','.$this->rfond.','.$this->vaxta.','.$this->summa.','.$this->god.',"'.$this->prixod.'","'.$this->kassa.'",
 			      "'.$this->data.'","'.$this->pr.'","'.$this->nomer.'","'.$this->data_in.'",@success,@msg)';
 //print($this->sql);

@@ -543,13 +543,13 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "fieldLabel": "Подогрев",
+                                        "fieldLabel": "П.Т.Н.",
                                         "fieldStyle": "background-color:#F0F8FF;font-size:11pt;text-align:right;",
                                         "hideTrigger": true,
                                         "inputType": "number",
                                         "labelWidth": 80,
                                         "layout|anchor": "100%",
-                                        "name": "podogrev",
+                                        "name": "ptn",
                                         "value": [
                                             "0"
                                         ]
@@ -593,7 +593,7 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "fieldLabel": "Стоки",
+                                        "fieldLabel": "Гвода",
                                         "fieldStyle": "background-color:#F0F8FF;font-size:11pt;text-align:right;",
                                         "hideTrigger": true,
                                         "inputType": "number",
@@ -883,7 +883,7 @@
                                             "var oplata = 0;",
                                             "var kvartplata = form.getForm().findField('kvartplata').getValue();",
                                             "var otoplenie = form.getForm().findField('otoplenie').getValue();",
-                                            "var podogrev = form.getForm().findField('podogrev').getValue();",
+                                            "var ptn = form.getForm().findField('ptn').getValue();",
                                             "var voda = form.getForm().findField('voda').getValue();",
                                             "var stoki = form.getForm().findField('stoki').getValue();",
                                             "var tbo = form.getForm().findField('tbo').getValue();",
@@ -891,7 +891,7 @@
                                             "var rfond = form.getForm().findField('rfond').getValue();",
                                             "var vaxta = form.getForm().findField('vaxta').getValue();",
                                             "",
-                                            "oplata = kvartplata + otoplenie + podogrev + voda + stoki + tbo + energy + rfond + vaxta;",
+                                            "oplata = kvartplata + otoplenie + ptn + voda + stoki + tbo + energy + rfond + vaxta;",
                                             "",
                                             "form.getForm().findField('summa').setValue(oplata);",
                                             "",

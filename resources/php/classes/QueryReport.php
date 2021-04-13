@@ -322,7 +322,10 @@ foreach ( $array as $key => $value )  {
 			      $this->sql='CALL OSBB.courseMapEn("'.$this->house_id.'", "'.$this->date_from.'",@content,@success,@msg)';
 			//  print($this->sql);
 			break;
-			
+			case "courseMapVoda":			
+			      $this->sql='CALL OSBB.courseMapVoda("'.$this->house_id.'", "'.$this->date_from.'",@content,@success,@msg)';
+			//  print($this->sql);
+			break;
 			case "reportLgotnikLgota":		
 			      $this->sql='CALL '.$this->base.'.reportLgotnikLgota("'.$this->lgota_id.'", @head,@content,@foot,@success,@msg)';
 			break;

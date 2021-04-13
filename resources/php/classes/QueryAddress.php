@@ -1221,7 +1221,7 @@ public function connect($login,$password)
 										      .'@success,@msg)';
 			break;
 			case "editOsmd":
-			 $this->sql='CALL YISGRAND.editOsmd("'
+			      $this->sql='CALL YISGRAND.editOsmd("'
 										      .$this->osmd_id.'","'
 										      .$this->osmd.'","'
 										      .$this->fname.'","'
@@ -1236,8 +1236,8 @@ public function connect($login,$password)
 										      .$this->kassa.'","'
 										      .$this->phone.'","'
 										      .$this->mfo.'","'
-										      .$this->ipay.'","'
-										      .$this->pb.'",'
+										      .$this->ipay.'","'			      										      .$this->pb.'","'
+										      .$this->mtb.'",'
 										      .'@success,@msg)';
 										      			 //  print_r($this->sql); 
 
@@ -1268,7 +1268,7 @@ public function connect($login,$password)
 
 			break;
 			case "editOplataApp":
-			      $this->sql='CALL OSBB.editOplataApp('.$this->rec_id.','.$this->address_id.','.$this->kvartplata.','.$this->otoplenie.',"'.$this->podogrev.'",'.$this->voda.','
+			      $this->sql='CALL OSBB.editOplataApp('.$this->rec_id.','.$this->address_id.','.$this->kvartplata.','.$this->otoplenie.',"'.$this->ptn.'",'.$this->voda.','
 			      .$this->stoki.','.$this->tbo.','.$this->energy.','.$this->rfond.','.$this->vaxta.','.$this->summa.','.$this->god.',"'.$this->prixod.'","'.$this->kassa.'",
 			      "'.$this->data.'","'.$this->pr.'","'.$this->nomer.'","'.$this->data_in.'",@success,@msg)';
 //print($this->sql);
