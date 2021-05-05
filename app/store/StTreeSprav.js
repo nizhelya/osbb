@@ -455,6 +455,11 @@ Ext.define('Osbb.store.StTreeSprav', {
                                         text: 'Контроль отопления'
                                     },
                                     {
+                                        id: 'ControlPtn',
+                                        leaf: true,
+                                        text: 'Контроль ПТН'
+                                    },
+                                    {
                                         id: 'ControlVoda',
                                         leaf: true,
                                         text: 'Контроль воды'

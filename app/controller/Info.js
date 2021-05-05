@@ -219,6 +219,8 @@ Ext.define('Osbb.controller.Info', {
                 break;
             case 'ControlVoda':
             case 'ControlTeplo':
+            case 'ControlPtn':
+
             case 'ControlKv':
             case 'ControlCubov':
 
@@ -385,6 +387,8 @@ Ext.define('Osbb.controller.Info', {
             case 'ItogMonthKv':
             case 'ControlVoda':
             case 'ControlTeplo':
+            case 'ControlPtn':
+
             case 'ControlKv':
             case 'ControlVaxta':
             case 'ControlTbo':

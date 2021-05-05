@@ -312,6 +312,9 @@ foreach ( $array as $key => $value )  {
 			case "ControlTeplo":		
 			      $this->sql='CALL '.$this->base.'.ControlTeplo("'.$this->date_from.'","'.$this->date_to.'",@content,@success,@msg)';
 			break;
+			case "ControlPtn":		
+			      $this->sql='CALL '.$this->base.'.ControlPtn("'.$this->date_from.'","'.$this->date_to.'",@content,@success,@msg)';
+			break;
 			case "reportLgotnik":		
 			      $this->sql='CALL '.$this->base.'.reportLgotnik("'.$this->date_from.'","'.$this->date_to.'", @head,@content,@foot,@success,@msg)';
 			break;

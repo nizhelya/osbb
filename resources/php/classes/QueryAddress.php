@@ -2260,20 +2260,7 @@ public function connect($login,$password)
 
 			break;
 		case "newAddress":
-			      $this->sql='CALL OSBB.newAddress("'
-										      .$this->qtykv.'","'
-										      .$this->nomerkv.'","'										      
-									              .$this->house_id.'","'
-										      .$this->kvartplata.'","'
-										      .$this->tbo.'","'
-										      .$this->voda.'","'
-										      .$this->stoki.'","'
-										      .$this->podogrev.'","'
-										      .$this->otoplenie.'","'
-										      .$this->energy.'","'
-										      .$this->rfond.'","'
-										      .$this->vaxta.'",'										      
-										      .'@success,@msg)';
+			      $this->sql='CALL OSBB.newAddress("'.$this->qtykv.'","'.$this->nomerkv.'","'.$this->house_id.'",@success,@msg)';
 			    //print_r($this->sql); 
 
 			break;
